@@ -77,12 +77,12 @@
           background-color: $main-color;
           color: black;
         }
-
       }
     }
-    &:last-child {
-      margin-right: 0;
-    }
+
+  }
+  &:last-child {
+    padding-right: 0;
   }
 }
 .header-phone {

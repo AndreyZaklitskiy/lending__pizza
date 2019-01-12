@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
   //кнопка выбрать
-  $('.btn').on('click', function() {
+  $('.btn').on('click', function(event) {
+    event.preventDefault();
     $(this).closest('.button').toggleClass('active');
   });
 
