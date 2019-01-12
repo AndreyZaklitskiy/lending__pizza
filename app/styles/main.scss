@@ -2,7 +2,7 @@
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
-@import "../../node_modules/font-awesome/scss/font-awesome";
+
 
 
 @import "modules/sprite";
@@ -39,3 +39,120 @@ body {
   min-height: 100%;
   line-height: 1.2;
 }
+
+
+/* отступы секций */
+.section {
+  margin: 80px 0;
+}
+
+h1, .h1 {
+  font-family: $logo-font;
+  font-size: 52px;
+  color: $white;
+}
+h2, .h2 {
+  font-family: $menu-font;
+  font-size: 24px;
+
+  color: $black;
+  text-align: center;
+}
+h3, .h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: $legend-font;
+  font-weight: normal;
+  color: $black;
+}
+p {
+  font-family: $main-font;
+  font-size: 16px;
+  color: $black;
+}
+
+
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 161px;
+  background-color: $accent;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  font-family: $menu-font;
+
+  .quantity {
+    display: none;
+    padding-right: 8px;
+    padding-left: 16px;
+
+    transition: all .5s;
+
+  }
+  input.number {
+    display: none;
+    width: 40px;
+    height: 48px;
+    text-align: center;
+    background-color: $accent;
+    outline: none;
+    border: none;
+    font-family: $phone-font;
+    font-size: 20px;
+    color: white;
+
+    transition: all .5s;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+.button.active {
+  cursor: default;
+  width: 200px;
+  .quantity {
+    display: inline-block;
+  }
+  .number {
+    display: inline-block;
+    background-color: $main-color;
+  }
+  .btn {
+    cursor: pointer;
+    padding: 17px 16px 8px 17px;
+    .choose {
+      display: none;
+    }
+  }
+}
+
+// стили кнопки
+.btn {
+  display: inline-block;
+  padding: 17px 30px;
+  height: 48px;
+  background-color: $accent;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  font-family: $menu-font;
+}
+
+.choose-btn {
+  @extend .btn;
+  .fas {
+    margin-right: 8px;
+  }
+}
+
+
+
+
+
