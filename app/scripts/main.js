@@ -18,7 +18,29 @@ $(document).ready(function(){
     slidesToScroll: 3,
     dots: true,
     prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
-    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+    responsive: [
+       {
+         breakpoint: 992,
+         settings: {
+           slidesToShow: 2,
+           slidesToScroll: 2,
+           infinite: true,
+           dots: true
+         }
+       },
+      {
+        breakpoint: 540,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+
+      ]
+
   });
 
   //слайдер с закусками
@@ -51,16 +73,16 @@ $(document).ready(function(){
 
 
   // выбор размера пиццы
-  var ts = $('.pizza').find('.size-26');
-  var tt = $('.pizza').find('.size-32');
+  var ts = $('.pizza-slider-item').find('.size-26');
+  var tt = $('.pizza-slider-item').find('.size-32');
 
   ts.on('click', function(){
     var little = '26';
     var littlePizzaPrice = '999 руб.';
     $(this).addClass('selected');
     $(this).siblings().removeClass('selected');
-    $(this).closest('.pizza').find('.pizza-price').html(littlePizzaPrice);
-    $(this).closest('.pizza').find('.pizza-size').html(little);
+    $(this).closest('.pizza-slider-item').find('.price').html(littlePizzaPrice);
+    $(this).closest('.pizza-slider-item').find('.pizza-size').html(little);
     $(this).closest('.pizza-size').html(little);
   });
   tt.on('click', function(){
@@ -68,7 +90,7 @@ $(document).ready(function(){
     var bigPizzaPrice = '1 345 руб.';
     $(this).siblings().removeClass('selected');
     $(this).addClass('selected');
-    $(this).closest('.pizza').find('.pizza-price').html(bigPizzaPrice);
-    $(this).closest('.pizza').find('.pizza-size').html(big);
+    $(this).closest('.pizza-slider-item').find('.price').html(bigPizzaPrice);
+    $(this).closest('.pizza-slider-item').find('.pizza-size').html(big);
   });
 });
