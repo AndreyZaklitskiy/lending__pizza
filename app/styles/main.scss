@@ -10,6 +10,7 @@
 @import "sections/header";
 @import "sections/head-section";
 @import "sections/pizza-section";
+@import "sections/snacks-section";
 
 
 .browserupgrade {
@@ -172,13 +173,14 @@ p {
   align-items: center;
   background-color: $accent-color;
   position: absolute;
-  bottom: 0;
   right: 50%;
-  -webkit-transform: translate(50%, 29px);
-  -moz-transform: translate(50%, 29px);
-  -ms-transform: translate(50%, 29px);
-  -o-transform: translate(50%, 29px);
-  transform: translate(50%, 29px);
+  top: 0;
+  -webkit-transform: translate(50%, -29px);
+  -moz-transform: translate(50%, -29px);
+  -ms-transform: translate(50%, -29px);
+  -o-transform: translate(50%, -29px);
+  transform: translate(50%, -29px);
+  z-index: 1000;
   .fas {
     font-size: 20px;
     display: block;
@@ -190,22 +192,25 @@ p {
 //заголовок секции
 .section-header {
   width: 100%;
-  text-transform: uppercase;
   text-align: center;
+  z-index: 2;
   h2 {
+    text-transform: uppercase;
     max-width: 550px;
     margin: 0 auto;
   }
 
   p {
     padding-top: 25px;
-    line-height: 5px;
     max-width: 550px;
     margin: 0 auto;
   }
-  &__white {
+  &.white {
+    h2 {
+      color: #ffffff;
+    }
     p {
-      padding-top: 40px;
+      color: #ffffff;
     }
   }
 }
