@@ -11,6 +11,7 @@
 @import "sections/head-section";
 @import "sections/pizza-section";
 @import "sections/snacks-section";
+@import "sections/drinks-section";
 
 
 .browserupgrade {
@@ -187,7 +188,6 @@ p {
     color: $white;
   }
 }
-
 
 //заголовок секции
 .section-header {

@@ -143,7 +143,7 @@ ul.slick-dots {
   li {
     height: 15px;
     width: 15px;
-    background-color: lighten($main-color, 10%);
+    background-color: lighten($accent-color, 15%);
     border-radius: 30px;
     button {
       &:before {
@@ -152,7 +152,7 @@ ul.slick-dots {
     }
   }
   li.slick-active {
-    background-color: $main-color;
+    background-color: $accent-color;
   }
 }
 
