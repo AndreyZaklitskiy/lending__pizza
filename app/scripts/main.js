@@ -86,12 +86,23 @@ $(document).ready(function(){
   $('.drinks-slider').slick({
     centerMode: true,
     infinite: true,
-    // centerPadding: '60px',
+    centerPadding: '60px',
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }
+    ]
   });
+
 
 
   // выравниваем высоту айтемов pizza-slider
@@ -99,7 +110,6 @@ $(document).ready(function(){
   var pizzaHeight = $('.pizza-slider').height();
   $('.pizza').height(pizzaHeight);
   */
-
 
   // выбор размера пиццы
   var ts = $('.pizza-slider-item').find('.size-26');
