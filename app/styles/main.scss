@@ -12,6 +12,7 @@
 @import "sections/pizza-section";
 @import "sections/snacks-section";
 @import "sections/drinks-section";
+@import "sections/order-section";
 
 
 .browserupgrade {
@@ -103,7 +104,7 @@ p {
   input.number {
     display: none;
     width: 40px;
-    height: 48px;
+    height: 46px;
     text-align: center;
     background-color: $accent-color;
     outline: none;
@@ -130,7 +131,7 @@ p {
 
   .number {
     display: inline-block;
-    background-color: $main-color;
+    background-color: #caad73;
   }
 
   .btn {
