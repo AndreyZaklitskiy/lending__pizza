@@ -3,6 +3,25 @@
 }
 }
 
+.order-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 26px;
+  grid-row-gap: 30px;
+  label {
+    span {
+      display: inline-block;
+    }
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+  .form-address {
+
+  }
+}
+
 .order-form-block {
   @extend .col-md-7;
   .section-header {
