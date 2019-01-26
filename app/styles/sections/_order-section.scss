@@ -57,7 +57,7 @@
 }
 
 .order-form-block {
-  @extend .col-md-7;
+  @extend .col-lg-7, .col-md-6;
   .section-header {
     h2 {
       text-align: left;
@@ -71,7 +71,7 @@
 }
 
 .checkout {
-  @extend .col-md-5;
+  @extend .col-lg-5, .col-md-6;
   background-color: #2a2a2a;
   padding: 23px;
 
@@ -131,7 +131,7 @@
   }
   .product {
     &:after {
-      content: '.....................';
+      content: '';
       overflow: hidden;
       display: inline-block;
       white-space: nowrap;
@@ -144,12 +144,53 @@
   }
 }
 .buttons-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   .reset {
     background-color: transparent;
     color: #8a8a8a;
     span {
       display: inline-block;
       border-bottom: 1px solid #8a8a8a;
+    }
+  }
+}
+
+
+
+//media
+@media (max-width: 1200px) {
+  .checkout {
+    h2 {
+      font-size: 25px;
+    }
+  }
+  .checkout-item {
+    p {
+      font-size: 13px;
+    }
+  }
+  .buttons-block {
+    .reset, .issue {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .order-form {
+    justify-content: flex-start;
+    label {
+      width: calc(100%);
+      flex-basis: calc(100%);
+      margin-bottom: 25px;
+    }
+  }
+  .buttons-block {
+    .btn, .choose-btn {
+      padding-right: 20px;
+      padding-left: 20px;
     }
   }
 }
