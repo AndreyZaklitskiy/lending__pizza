@@ -2,6 +2,7 @@
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
 @import "modules/sprite";
 @import "functions";
 @import "reset";
@@ -181,7 +182,7 @@ p {
   -ms-transform: translate(50%, -29px);
   -o-transform: translate(50%, -29px);
   transform: translate(50%, -29px);
-  z-index: 1000;
+  z-index: 50;
   .fas {
     font-size: 20px;
     display: block;
@@ -199,7 +200,6 @@ p {
     max-width: 550px;
     margin: 0 auto;
   }
-
   p {
     padding-top: 25px;
     max-width: 550px;
@@ -217,6 +217,8 @@ p {
 
 
 
+
+
 //media
 @media (max-width: 1200px) {
   h3, .h3 {
@@ -227,6 +229,7 @@ p {
 @media (max-width: 992px) {
 
 }
+
 @media (max-width: 768px) {
 h3, .h3 {
   font-size: 14px;

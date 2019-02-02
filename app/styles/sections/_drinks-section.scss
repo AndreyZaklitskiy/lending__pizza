@@ -46,10 +46,12 @@
 
       margin-bottom: 55px;
       img {
+        transition: all .4s;
         height: 285px;
       }
     }
     .text {
+      transition: all .4s;
       h3 {
         font-size: 18px;
       }
@@ -66,7 +68,7 @@
   margin: 60px auto auto;
   position: relative;
   text-align: center;
-  transition: all 1s ease;
+
   .image {
     margin-bottom: 45px;
   }

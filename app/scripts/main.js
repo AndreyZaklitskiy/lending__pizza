@@ -1,10 +1,21 @@
 $(document).ready(function(){
 
+  //hamburger
+  $('.hamburger').on('click', function () {
+    $('.hamburger').addClass('is-active');
+    $('.adaptive-menu').toggleClass('open');
+  });
+  $('.adaptive-close-btn').on('click', function () {
+    $('.hamburger').removeClass('is-active');
+    $(this).closest('.adaptive-menu').removeClass('open');
+  });
   //кнопка выбрать
   $('.btn').on('click', function(event) {
     event.preventDefault();
     $(this).closest('.button').toggleClass('active');
+
   });
+
 
   //Верхний слайдер (горячие предложения).
   $('.header-slider').slick({
