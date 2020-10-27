@@ -1,20 +1,23 @@
-// modules & sections
+
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
-@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+// endbower
+
+//@import "../../bower_components/Font-Awesome/web-fonts-with-css/css/fontawesome-all.min.css";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+// modules & sections
+
 @import "modules/sprite";
 @import "functions";
 @import "reset";
 @import "fonts";
 @import "variables";
+
 @import "sections/header";
 @import "sections/head-section";
-@import "sections/pizza-section";
-@import "sections/snacks-section";
-@import "sections/drinks-section";
-@import "sections/order-section";
-@import "sections/footer-section";
+
 
 
 .browserupgrade {
@@ -23,6 +26,7 @@
   color: #000;
   padding: 0.2em 0;
 }
+
 
 
 html {
@@ -38,47 +42,39 @@ body {
   overflow: hidden;
   min-height: 100%;
   line-height: 1.2;
-}
-
-
-.container {
-  position: relative;
-  height: 100%;
+  font-size: 14px;
+  background-color: #f4f4f4;
 }
 
 /* отступы секций */
 .section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin: 80px 0;
 }
 
 h1, .h1 {
-  font-family: $logo-font;
+  font-family: $isadora;
   font-size: 52px;
   color: $white;
 }
-
 h2, .h2 {
-  font-family: $header-font;
+  font-family: $menu-font;
   font-size: 24px;
+
   color: $black;
   text-align: center;
 }
-
 h3, .h3 {
   text-transform: uppercase;
   font-size: 18px;
-  font-family: $legend-font;
+  font-family: $name-font;
   font-weight: normal;
   color: $black;
 }
-
 p {
-  font-family: $main-font;
+  font-family: $text-font;
   font-size: 16px;
   color: $black;
 }
-
 
 .button {
   cursor: pointer;
@@ -87,7 +83,7 @@ p {
   justify-content: center;
   height: 48px;
   width: 161px;
-  background-color: $accent-color;
+  background-color: $accent;
   text-align: center;
   text-transform: uppercase;
   color: $white;
@@ -101,13 +97,12 @@ p {
     transition: all .5s;
 
   }
-
   input.number {
     display: none;
     width: 40px;
-    height: 46px;
+    height: 48px;
     text-align: center;
-    background-color: $accent-color;
+    background-color: $accent-light;
     outline: none;
     border: none;
     font-family: $phone-font;
@@ -125,20 +120,15 @@ p {
 .button.active {
   cursor: default;
   width: 200px;
-
   .quantity {
     display: inline-block;
   }
-
   .number {
     display: inline-block;
-    background-color: #caad73;
   }
-
   .btn {
     cursor: pointer;
     padding: 17px 16px 8px 17px;
-
     .choose {
       display: none;
     }
@@ -148,9 +138,9 @@ p {
 // стили кнопки
 .btn {
   display: inline-block;
-  padding: 17px 30px;
+  padding: 17px 35px;
   height: 48px;
-  background-color: $accent-color;
+  background-color: $accent;
   text-align: center;
   text-transform: uppercase;
   color: $white;
@@ -164,81 +154,701 @@ p {
   }
 }
 
-.scroll-btn {
+//Логотип
+.logo {
+  display: inline-block;
+  margin-left: 10px;
+  z-index: 3;
+}
+
+.scroll-button {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  -o-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
   width: 58px;
   height: 58px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $accent-color;
-  position: absolute;
-  right: 50%;
-  top: 0;
-  -webkit-transform: translate(50%, -29px);
-  -moz-transform: translate(50%, -29px);
-  -ms-transform: translate(50%, -29px);
-  -o-transform: translate(50%, -29px);
-  transform: translate(50%, -29px);
-  z-index: 50;
+  background-color: $accent-light;
   .fas {
-    font-size: 20px;
-    display: block;
+    margin-left: 22px;
+    line-height: 2.4;
     color: $white;
+    text-align: center;
+    font-size: 25px;
   }
 }
 
-//заголовок секции
-.section-header {
+/* хэдер */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  text-align: center;
   z-index: 2;
-  h2 {
+  .container {
+    padding: 30px 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+    background-color: black;
+  }
+}
+
+.section-header {
+  .h2 {
+    color: $black;
+    font-family: $header-font;
     text-transform: uppercase;
-    max-width: 550px;
-    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
   }
   p {
-    padding-top: 25px;
-    max-width: 550px;
-    margin: 0 auto;
+    text-align: center;
+    width: 550px;
+    margin-right: auto;
+    margin-left: auto;
   }
   &.white {
     h2 {
-      color: #ffffff;
+      color: $white;
     }
     p {
-      color: #ffffff;
+      color: $white;
+
     }
   }
 }
 
 
+//главное меню
+.menu {
+  z-index: 3;
+  margin-top: 15px;
+  &-item {
+    display: inline-block;
+    margin-right: 45px;
+    a {
+      display: inline-block;
+      font-size: 12px;
+      font-family: $menu-font;
+      color: $white;
+      text-transform: uppercase;
+      .arr {
+        color: #67635E;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        text-align: center;
+        margin-right: 7px;
 
-
-
-//media
-@media (max-width: 1200px) {
-  h3, .h3 {
-    font-size: 15px;
+        .fas {
+          line-height: 1.8;
+          font-size: 11px;
+        }
+      }
+      span {
+        text-decoration: underline;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      a>.arr {
+        background-color: $accent;
+        .fas {
+          color: $black;
+        }
+      }
+      span {
+        color: $accent;
+        text-decoration: none;
+      }
+    }
   }
 }
 
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 768px) {
-h3, .h3 {
-  font-size: 14px;
-}
-  p {
-    font-size: 14px;
+//номер телефона
+.phone {
+  margin-top: 5px;
+  text-align: right;
+  .order {
+    color: $white;
+    opacity: 0.35;
+    font-size: 12px;
+    letter-spacing: 1.5px;
   }
-  .section {
+  &-number {
+    .fas {
+      display: inline-block;
+      color: $accent;
+      font-size: 12px;
+      margin-right: 2px;
+      margin-top: -2px;
+    }
+    .number {
+      display: inline-block;
+      font-family: $phone-font;
+      font-size: 24px;
+      color: $white;
+      letter-spacing: .5px;
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+//предложения
+.offers {
+  position: relative;
+  height: 860px;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    margin-top: 113px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .3;
+  }
+}
+//горячие предложения
+.top-slider {
+  margin: 65px 0 65px;
+  .offer {
+    .h1 {
+      margin-top: 126px;
+      margin-bottom: 30px;
+      text-transform: capitalize;
+    }
+    p {
+      margin-bottom: 35px;
+      max-width: 260px;
+      color: $white;
+      line-height: 1.5;
+    }
+    img {
+      width: 500px;
+      height: 500px;
+    }
+  }
+  //  стрелки верхнего слайдера
+  .slick-arrow, .slick-next, .slick-prev {
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    color: #706965;
+    background-color: transparent;
+    z-index: 2;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: transparent;
+      left: 0;
+      top: 0;
+    }
+    &:hover {
+      color: $white;
+      &::before {
+        opacity: 0.2;
+        background-color: $accent;
+      }
+    }
+  }
+}
+.slick-prev {
+  i.fas {
+    margin-right: 5px;
+  }
+}
+.slick-next {
+  i.fas {
+    margin-left: 5px;
+  }
+}
+
+.choose-pizza {
+  z-index: 10;
+  background-color: #f4f4f4;
+  position: relative;
+  .container {
+    margin-top: -100px;
+    background-color: #fff;
+    position: relative;
+  }
+  .row {
+    position: relative;
+    .col-md-10 {
+      position: static;
+    }
+  }
+}
+
+.pizza {
+  width: 280px;
+  margin-left: 22px;
+  &-slider {
+    position: static;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &.slick-slider {
+      margin-bottom: 100px;
+    }
+    .slick-arrow, .slick-prev, .slick-next {
+      background-color: $accent;
+      width: 47px;
+      height: 100px;
+      color: white;
+      font-size: 24px;
+      top: 150px;
+      &:before {
+        content: '';
+      }
+      &:hover {
+        background-color: $accent-light;
+      }
+    }
+    .slick-prev {
+      left: 0;
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      .fas {
+        margin-right: 7px;
+      }
+    }
+    .slick-next {
+      right: 0;
+      border-radius: 100% 0 0 100% / 50% 0 0 50%;
+      .fas {
+        margin-left: 7px;
+      }
+    }
+  }
+  &-offer {
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 0 30px;
+  }
+  &-image {
+    width: 205px;
+    height: 205px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 25px;
+  }
+  &-data {
+    position: relative;
+  }
+  //цена пиццы
+  &-price {
+    width: 135px;
+    height: 45px;
+    line-height: 1;
+    text-align: center;
+    top: 3px;
+    right: -16px;
+    display: inline-block;
+    position: absolute;
+    padding: 10px 10px 10px;
+    color: $white;
+    font-family: $phone-font;
+    font-size: 24px;
+    background-color: $accent;
+  }
+  &-description {
+    margin-top: 30px;
+    h3 {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $accent;
+    }
+    p {
+      padding-bottom: 25px;
+    }
+    .composition {
+      color: $grey;
+      padding-bottom: 33px;
+    }
+  }
+  .choose-btn {
+    position: absolute;
+    bottom: 0;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+}
+ul.slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 77px;
+  li {
+    height: 15px;
+    width: 15px;
+    background-color: lighten($accent, 10%);
+    border-radius: 30px;
+    button {
+      &:before {
+        content: ' ';
+      }
+    }
+  }
+  li.slick-active {
+    background-color: $accent;
+  }
+}
+
+.pizza-btn {
+  margin-top: auto;
+}
+
+.size {
+  display: inline-block;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  text-align: center;
+  color: $white;
+  font-family: $phone-font;
+  line-height: 2.1;
+  cursor: pointer;
+  &-26 {
+    margin-left: 30px;
+    width: 45px;
+    height: 45px;
+    border: 5px solid $accent-light;
+    font-size: 16px;
+  }
+  &-32 {
+    margin-left: 10px;
+    width: 54px;
+    height: 54px;
+    border: 6px solid $accent-light;
+    font-size: 20px;
+  }
+  &.selected {
+    background-color: $accent;
+  }
+}
+
+section.snacks {
+  position: relative;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  .container {
+    z-index: 2;
+    position: relative;
+    padding-bottom: 75px;
+  }
+  &:before {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: .8;
+  }
+}
+
+.snack-slider {
+  margin-top: 65px;
+  //  стрелки слайдера с закусками
+  .slick-arrow, .slick-next, .slick-prev {
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    color: #706965;
+    background-color: transparent;
+    z-index: 2;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: transparent;
+      left: 0;
+      top: 0;
+    }
+    &:hover {
+      color: $white;
+      &::before {
+        opacity: 0.2;
+        background-color: $accent;
+      }
+    }
+  }
+  .slick-prev {
+    left: -4%;
+  }
+  .slick-next {
+    right: -4%;
+  }
+
+  ul.slick-dots {
+    bottom: 0;
+    margin-bottom: 0;
+    li {
+      height: 15px;
+      width: 15px;
+      opacity: 0.4;
+      background-color: white;
+      border-radius: 30px;
+      button {
+        &:before {
+          content: ' ';
+        }
+      }
+    }
+    li.slick-active {
+      opacity: 1;
+      background-color: $accent;
+    }
+  }
+}
+.snack {
+  position: relative;
+  background-color: $white;
+  margin: 0 15px 68px;
+  .photo {
+
+  }
+  img {
+    width: 260px;
+    height: 180px;
+  }
+  .description {
+    background-color: $white;
+    width: 260px;
+    position: relative;
     padding-top: 50px;
-    padding-bottom: 50px;
+    text-align: center;
+    .button {
+      width: 100%;
+      .number {
+        margin-left: auto;
+      }
+    }
+  }
+  .price {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: $accent-light;
+    width: 60px;
+    height: 60px;
+    padding-top: 13px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    p {
+      color: $white;
+      font-size: 12px;
+      text-align: center;
+      span {
+        font-family: $menu-font;
+      }
+    }
+    .weight {
+      padding-bottom: 4px;
+    }
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+  p {
+    font-size: 13px;
+  }
+  p.text {
+    line-height: 24px;
+    padding: 0 30px 10px;
+  }
+  p.composition {
+    background-color: #f2f2f2;
+    line-height: 24px;
+    padding: 10px 20px 8px;
+  }
+}
+
+.drinks {
+  .container {
+    text-align: center;
+  }
+  .section-header {
+    padding-bottom: 100px;
+  }
+
+  &-slider {
+
+    .slick-arrow, .slick-next, .slick-prev {
+      width: 50px;
+      height: 50px;
+      font-size: 36px;
+      color: #706965;
+      background-color: transparent;
+      z-index: 2;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background-color: transparent;
+        left: 0;
+        top: 0;
+      }
+      &:hover {
+        color: $white;
+        &::before {
+          opacity: 0.2;
+          background-color: $accent;
+        }
+      }
+    }
+    .slick-prev {
+      left: -4%;
+    }
+    .slick-next {
+      right: -4%;
+    }
+
+  }
+  &-slide {
+    margin: auto;
+    position: relative;
+    width: 204px !important;
+    text-align: center;
+    margin: 0 50px;
+    .image {
+      margin-bottom: 55px;
+    }
+    img {
+      margin: 0 auto;
+      height: 285px;
+    }
+    .text {
+      margin-bottom: 30px;
+      h3 {
+        color: #333333;
+        padding-bottom: 18px;
+      }
+      p {
+        font-family: $name-font;
+        color: #999999;
+        font-size: 16px;
+      }
+    }
+
+    .button {
+      width: 100%;
+      .number {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.garantis {
+  background-image: url(../images/flour.jpg);
+  background-position: top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  .section-header {
+    padding-top: 90px;
+    padding-bottom: 70px;
+    p {
+      margin-top: 40px;
+      line-height: 28px;
+      font-size: 18px;
+    }
+  }
+}
+
+.checkout {
+  @extend .col-md-7;
+  .container {
+    margin: 80px auto;
+  }
+}
+
+.checkout-form {
+  .section-header {
+    margin-bottom: 60px;
+    h2 {
+      text-align: left;
+      padding-bottom: 30px;
+    }
+    p {
+      width: auto;
+      max-width: 620px;
+      text-align: left;
+      margin-right: 0;
+      margin-left: 0;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  //форма
+  .form {
+    &-item {
+      @extend .col-md-3;
+    }
+  }
+
+}
+
+
+
+
+/* media */
+
+@media (max-width: 1200px) {
+  .menu {
+    &-item {
+      margin-right: 13px;
+    }
   }
 }

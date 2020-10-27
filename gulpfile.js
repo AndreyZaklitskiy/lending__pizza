@@ -1,109 +1,104 @@
-// generated on 2018-10-14 using generator-webapp 3.0.1
-const gulp = require('gulp');
+// generated on 2020-10-27 using generator-webapp 4.0.0-8
+const { src, dest, watch, series, parallel, lastRun } = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
-const browserSync = require('browser-sync').create();
+const fs = require('fs');
+const mkdirp = require('mkdirp');
+const Modernizr = require('modernizr');
+const browserSync = require('browser-sync');
 const del = require('del');
-const gnf = require('gulp-npm-files');
-const runSequence = require('run-sequence');
-const replace = require('gulp-replace-path');
-const spritesmith = require('gulp.spritesmith');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const { argv } = require('yargs');
 
 const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
+const server = browserSync.create();
 
-let dev = true;
+const port = argv.port || 9000;
 
-gulp.task('copyNpmDependenciesOnly', function() {
-    return gulp.src(gnf(), {base:'./'})
-        .pipe(gulp.dest('.tmp'))
-        .pipe(gulp.dest('./dist'));
-});
+const isProd = process.env.NODE_ENV === 'production';
+const isTest = process.env.NODE_ENV === 'test';
+const isDev = !isProd && !isTest;
 
-gulp.task('serveNpmDependencies', function() {
-    return gulp.src(gnf(), {base:'./'})
-        .pipe(gulp.dest('.tmp'));
-});
-
-gulp.task('sprite', function () {
-    gulp.src('app/images/sprite/*.png')
-        .pipe(spritesmith({
-            imgName: 'sprite.png',
-            cssName: '../styles/modules/_sprite.scss',
-            padding: 1,
-            imgPath: '../images/sprite.png'
-        }))
-        .pipe(errorNotifier())
-        .pipe(gulp.dest('app/images'));
-});
-
-gulp.task('styles', () => {
-  return gulp.src('app/styles/*.scss')
+function styles() {
+  return src('app/styles/*.scss', {
+    sourcemaps: !isProd,
+  })
     .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.sass.sync({
       outputStyle: 'expanded',
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-    .pipe($.if(dev, $.sourcemaps.write()))
-    .pipe(gulp.dest('.tmp/styles'))
-    .pipe(reload({stream: true}));
-});
+    .pipe($.postcss([
+      autoprefixer()
+    ]))
+    .pipe(dest('.tmp/styles', {
+      sourcemaps: !isProd,
+    }))
+    .pipe(server.reload({stream: true}));
+};
 
-gulp.task('stylesForBuild', function () {
-    return gulp.src('app/styles/*.scss')
-        .pipe($.plumber())
-        .pipe($.sass.sync({
-            outputStyle: 'compressed',
-            precision: 10,
-            includePaths: ['.']
-        }).on('error', $.sass.logError))
-        .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-        .pipe(replace('../node_modules/', '/node_modules/'))
-        .pipe(gulp.dest('dist/styles'));
-});
-
-gulp.task('scripts', () => {
-  return gulp.src('app/scripts/**/*.js')
+function scripts() {
+  return src('app/scripts/**/*.js', {
+    sourcemaps: !isProd,
+  })
     .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.babel())
-    .pipe($.if(dev, $.sourcemaps.write('.')))
-    .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({stream: true}));
-});
+    .pipe(dest('.tmp/scripts', {
+      sourcemaps: !isProd ? '.' : false,
+    }))
+    .pipe(server.reload({stream: true}));
+};
 
-gulp.task('scriptsForBuild', () => {
-  return gulp.src('app/scripts/**/*.js')
-    .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.babel())
-    .pipe($.if(dev, $.sourcemaps.write('.')))
-    .pipe(gulp.dest('dist/scripts'));
-});
+async function modernizr() {
+  const readConfig = () => new Promise((resolve, reject) => {
+    fs.readFile(`${__dirname}/modernizr.json`, 'utf8', (err, data) => {
+      if (err) reject(err);
+      resolve(JSON.parse(data));
+    })
+  })
+  const createDir = () => new Promise((resolve, reject) => {
+    mkdirp(`${__dirname}/.tmp/scripts`, err => {
+      if (err) reject(err);
+      resolve();
+    })
+  });
+  const generateScript = config => new Promise((resolve, reject) => {
+    Modernizr.build(config, content => {
+      fs.writeFile(`${__dirname}/.tmp/scripts/modernizr.js`, content, err => {
+        if (err) reject(err);
+        resolve(content);
+      });
+    })
+  });
 
-function lint(files) {
-  return gulp.src(files)
-    .pipe($.eslint({ fix: true }))
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+  const [config] = await Promise.all([
+    readConfig(),
+    createDir()
+  ]);
+  await generateScript(config);
 }
 
-gulp.task('lint', () => {
-  return lint('app/scripts/**/*.js')
-    .pipe(gulp.dest('app/scripts'));
-});
-gulp.task('lint:test', () => {
-  return lint('test/spec/**/*.js')
-    .pipe(gulp.dest('test/spec'));
-});
+const lintBase = (files, options) => {
+  return src(files)
+    .pipe($.eslint(options))
+    .pipe(server.reload({stream: true, once: true}))
+    .pipe($.eslint.format())
+    .pipe($.if(!server.active, $.eslint.failAfterError()));
+}
+function lint() {
+  return lintBase('app/scripts/**/*.js', { fix: true })
+    .pipe(dest('app/scripts'));
+};
+function lintTest() {
+  return lintBase('test/spec/**/*.js');
+};
 
-gulp.task('html', ['stylesForBuild', 'scriptsForBuild'], () => {
-  return gulp.src('app/*.html')
+function html() {
+  return src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
+    .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
     .pipe($.if(/\.html$/, $.htmlmin({
       collapseWhitespace: true,
       minifyCSS: true,
@@ -114,97 +109,115 @@ gulp.task('html', ['stylesForBuild', 'scriptsForBuild'], () => {
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true
     })))
-    .pipe(gulp.dest('dist'));
-});
+    .pipe(dest('dist'));
+}
 
-gulp.task('images', () => {
-    return gulp.src('app/images/**/*')
-        .pipe(gulp.dest('dist/images'));
-});
+function images() {
+  return src('app/images/**/*', { since: lastRun(images) })
+    .pipe($.imagemin())
+    .pipe(dest('dist/images'));
+};
 
-gulp.task('fonts', () => {
-  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('app/fonts/**/*'))
-    .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
-});
+function fonts() {
+  return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2}')
+    .pipe($.if(!isProd, dest('.tmp/fonts'), dest('dist/fonts')));
+};
 
-gulp.task('fontsForBuild', () => {
-    return gulp.src('app/fonts/*')
-        .pipe(gulp.dest('dist/fonts'));
-});
-
-gulp.task('extras', () => {
-  return gulp.src([
+function extras() {
+  return src([
     'app/*',
     '!app/*.html'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
-});
+  }).pipe(dest('dist'));
+};
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+function clean() {
+  return del(['.tmp', 'dist'])
+}
 
-gulp.task('serve', () => {
-  runSequence(['clean'], ['styles', 'scripts', 'fonts', 'serveNpmDependencies'], () => {
-    browserSync.init({
-      notify: false,
-      port: 9000,
-      server: {
-        baseDir: ['.tmp', 'app'],
-        routes: {
-            '../node_modules': 'node_modules'
-        }
-      }
-    });
+function measureSize() {
+  return src('dist/**/*')
+    .pipe($.size({title: 'build', gzip: true}));
+}
 
-    gulp.watch([
-      'app/*.html',
-      'app/images/**/*',
-      '.tmp/fonts/**/*'
-    ]).on('change', reload);
+const build = series(
+  clean,
+  parallel(
+    lint,
+    series(parallel(styles, scripts, modernizr), html),
+    images,
+    fonts,
+    extras
+  ),
+  measureSize
+);
 
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/fonts/**/*', ['fonts']);
-  });
-});
-
-gulp.task('serve:dist', ['default'], () => {
-  browserSync.init({
+function startAppServer() {
+  server.init({
     notify: false,
-    port: 9000,
+    port,
     server: {
-      baseDir: ['dist']
+      baseDir: ['.tmp', 'app'],
+      routes: {
+        '/node_modules': 'node_modules'
+      }
     }
   });
-});
 
-gulp.task('serve:test', ['scripts'], () => {
-  browserSync.init({
+  watch([
+    'app/*.html',
+    'app/images/**/*',
+    '.tmp/fonts/**/*'
+  ]).on('change', server.reload);
+
+  watch('app/styles/**/*.scss', styles);
+  watch('app/scripts/**/*.js', scripts);
+  watch('modernizr.json', modernizr);
+  watch('app/fonts/**/*', fonts);
+}
+
+function startTestServer() {
+  server.init({
     notify: false,
-    port: 9000,
+    port,
     ui: false,
     server: {
       baseDir: 'test',
       routes: {
         '/scripts': '.tmp/scripts',
-        '../node_modules': 'node_modules'
+        '/node_modules': 'node_modules'
       }
     }
   });
 
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
-  gulp.watch('test/spec/**/*.js', ['lint:test']);
-});
+  watch('test/index.html').on('change', server.reload);
+  watch('app/scripts/**/*.js', scripts);
+  watch('test/spec/**/*.js', lintTest);
+}
 
-gulp.task('build', ['lint', 'html', 'extras', 'images', 'copyNpmDependenciesOnly', 'fontsForBuild'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
-});
-
-gulp.task('default', () => {
-  return new Promise(resolve => {
-    dev = false;
-    runSequence('clean', 'build', resolve);
+function startDistServer() {
+  server.init({
+    notify: false,
+    port,
+    server: {
+      baseDir: 'dist',
+      routes: {
+        '/node_modules': 'node_modules'
+      }
+    }
   });
-});
+}
+
+let serve;
+if (isDev) {
+  serve = series(clean, parallel(styles, scripts, modernizr, fonts), startAppServer);
+} else if (isTest) {
+  serve = series(clean, scripts, startTestServer);
+} else if (isProd) {
+  serve = series(build, startDistServer);
+}
+
+exports.serve = serve;
+exports.build = build;
+exports.default = build;

@@ -1,96 +1,66 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="Пицца надом" content="">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Пицца на дом</title>
+  <title>webapp</title>
 
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
   <link rel="stylesheet" href="styles/main.css">
 
 </head>
 <body>
 
-<div class="adaptive-menu open">
-
-  <div class="adaptive-close-btn">
-    <i class="fas fa-times"></i>
-  </div>
-
-  <ul class="header-menu">
-    <li class="header-menu-item"><a href="#">
-      <div class="mark"><i class="fas fa-chevron-right"></i></div>
-      Начало</a></li>
-    <li class="header-menu-item"><a href="#">
-      <div class="mark"><i class="fas fa-chevron-right"></i></div>
-      Выбрать пиццу</a></li>
-    <li class="header-menu-item"><a href="#">
-      <div class="mark"><i class="fas fa-chevron-right"></i></div>
-      Выбрать закуску</a></li>
-    <li class="header-menu-item"><a href="#">
-      <div class="mark"><i class="fas fa-chevron-right"></i></div>
-      Выбрать напитки</a></li>
-  </ul>
-
-  <div class="header-phone">
-    <div class="header-phone-order">Заказать по телефону</div>
-    <div class="header-phone-number">
-      <i class="fas fa-phone"></i>
-      <p class="number"><span>+7 (495)</span> 923-35-74</p>
-    </div>
-  </div>
-</div>
-
-<header class="header" style="background-image: url(images/bg.jpg)">
+<header class="header">
   <div class="container">
-    <div class="top-line">
-      <div class="header-logo">
+    <div class="row">
+
+      <div class="col-md-2">
         <a href="#" class="logo">
-          <img src="images/logo.png" alt="Пицца надом">
+          <img src="images/logo.png" alt="Пицерия | Пицца надом, Москва">
         </a>
       </div>
 
-      <div class="header-hamburger">
-        <div class="hamburger hamburger--squeeze">
-          <div class="hamburger-box">
-            <div class="hamburger-inner"></div>
+      <div class="col-md-7">
+        <ul class="menu">
+          <li class="menu-item"><a href="#">
+            <div class="arr"><i class="fas fa-chevron-right"></i></div>
+            <span>Начало</span></a></li>
+          <li class="menu-item"><a href="#">
+            <div class="arr"><i class="fas fa-chevron-right"></i></div>
+            <span>Выбрать пиццу</span></a></li>
+          <li class="menu-item"><a href="#">
+            <div class="arr"><i class="fas fa-chevron-right"></i></div>
+            <span>Выбрать закуску</span></a></li>
+          <li class="menu-item"><a href="#">
+            <div class="arr"><i class="fas fa-chevron-right"></i></div>
+            <span>Выбрать напитки</span></a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <div class="phone">
+          <p class="order">Заказать по телефону:</p>
+          <div class="phone-number">
+            <i class="fas fa-phone"></i>
+            <p class="number"><span>+7 (495)</span> 923-35-74</p>
           </div>
         </div>
       </div>
 
-      <ul class="header-menu">
-        <li class="header-menu-item"><a href="#">
-          <div class="mark"><i class="fas fa-chevron-right"></i></div>
-          Начало</a></li>
-        <li class="header-menu-item"><a href="#">
-          <div class="mark"><i class="fas fa-chevron-right"></i></div>
-          Выбрать пиццу</a></li>
-        <li class="header-menu-item"><a href="#">
-          <div class="mark"><i class="fas fa-chevron-right"></i></div>
-          Выбрать закуску</a></li>
-        <li class="header-menu-item"><a href="#">
-          <div class="mark"><i class="fas fa-chevron-right"></i></div>
-          Выбрать напитки</a></li>
-      </ul>
-      <div class="header-phone">
-        <div class="header-phone-order">Заказать по телефону</div>
-        <div class="header-phone-number">
-          <i class="fas fa-phone"></i>
-          <p class="number"><span>+7 (495)</span> 923-35-74</p>
-        </div>
-      </div>
-
     </div>
+  </div>
+</header>
 
-    <div class="header-slider">
+<section class="offers" style="background-image: url(images/bg.jpg)">
+
+  <div class="container">
+    <div class="top-slider">
       <div class="offer">
         <div class="row">
-          <div class="description">
+          <div class="col-md-4 col-md-offset-1">
             <h1 class="h1">
               Пицца неаполитана
             </h1>
@@ -106,7 +76,7 @@
               </a>
             </div>
           </div>
-          <div class="image">
+          <div class="col-md-6 col-md-offset-1">
             <img src="images/neapolitana.png" alt="Пицца неаполитана">
           </div>
         </div>
@@ -114,7 +84,7 @@
 
       <div class="offer">
         <div class="row">
-          <div class="description">
+          <div class="col-md-4 col-md-offset-1">
             <h1 class="h1">
               Пицца пеперони
             </h1>
@@ -130,7 +100,7 @@
               </a>
             </div>
           </div>
-          <div class="image">
+          <div class="col-md-6 col-md-offset-1">
             <img src="images/pepperony.png" alt="Пицца неаполитана">
           </div>
         </div>
@@ -138,7 +108,7 @@
 
       <div class="offer">
         <div class="row">
-          <div class="description">
+          <div class="col-md-4 col-md-offset-1">
             <h1 class="h1">
               Пицца Тропикана
             </h1>
@@ -154,410 +124,401 @@
               </a>
             </div>
           </div>
-          <div class="image">
+          <div class="col-md-6 col-md-offset-1">
             <img src="images/tropicana.png" alt="Пицца неаполитана">
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
+<section class="choose-pizza">
+  <div class="container">
 
-  </div><!--container-->
-</header>
-
-<main class="pizza-section">
-
-  <div class="container section">
-    <div class="scroll-btn">
+    <div class="scroll-button">
       <i class="fas fa-angle-double-down"></i>
     </div>
-
 
     <div class="section-header">
-      <h2>
-        Выбрать пиццу
-      </h2>
+      <h2 class="h2">Выбрать пиццу</h2>
     </div>
 
-    <div class="pizza-slider">
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="pizza-slider">
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/neapolitana.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
             </div>
-            <div class="size size-32">
-              32
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
+                ipsa magnam minima quidem sint, veritatis.
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
             </div>
-            <div class="price">
-              999 руб.
-            </div>
-          </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
-          </div>
-        </div>
-      </div>
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
-            </div>
-            <div class="size size-32">
-              32
-            </div>
-            <div class="price">
-              999 руб.
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <div href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
-          </div>
-        </div>
-      </div>
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/pepperony.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
             </div>
-            <div class="size size-32">
-              32
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
             </div>
-            <div class="price">
-              999 руб.
-            </div>
-          </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
-          </div>
-        </div>
-      </div>
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
-            </div>
-            <div class="size size-32">
-              32
-            </div>
-            <div class="price">
-              999 руб.
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <div href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
-          </div>
-        </div>
-      </div>
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/tropicana.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
             </div>
-            <div class="size size-32">
-              32
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
             </div>
-            <div class="price">
-              999 руб.
-            </div>
-          </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
-          </div>
-        </div>
-      </div>
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
-            </div>
-            <div class="size size-32">
-              32
-            </div>
-            <div class="price">
-              999 руб.
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <div href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
-          </div>
-        </div>
-      </div>
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/neapolitana.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
             </div>
-            <div class="size size-32">
-              32
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
             </div>
-            <div class="price">
-              999 руб.
-            </div>
-          </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
-          </div>
-        </div>
-      </div>
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
-            </div>
-            <div class="size size-32">
-              32
-            </div>
-            <div class="price">
-              999 руб.
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <a href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </a>
             </div>
           </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/pepperony.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
+            </div>
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
+            </div>
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <div href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="pizza-slider-item">
-        <div class="offer" style="background-image: url(images/flour-cut.jpg);">
-          <img src="images/menu/pizza/neapolitana.png" alt="Пицца неаполитана" class="">
-          <div class="data">
-            <div class="size size-26 selected">
-              26
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/tropicana.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
             </div>
-            <div class="size size-32">
-              32
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
             </div>
-            <div class="price">
-              999 руб.
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <div href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="description">
-          <h3>
-            Пицца неаполитана,
-            <span class="pizza-size">26</span>
-            см
-          </h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium animi dignissimos dolorum eaque
-            ipsa magnam minima quidem sint, veritatis.
-            Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
-          </p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/neapolitana.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
+            </div>
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
+            </div>
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <a href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/pepperony.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
+            </div>
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
+            </div>
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <div href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pizza">
+            <div class="pizza-offer" style="background-image: url(images/flour-cut.jpg);">
+              <img src="images/menu/pizza/tropicana.png" alt="Пицца" class="pizza-image">
+              <div class="pizza-data">
+                <div class="size size-26 selected">
+                  26
+                </div>
+                <div class="size size-32">
+                  32
+                </div>
+                <div class="pizza-price">
+                  999 руб.
+                </div>
+              </div>
+            </div>
+            <div class="pizza-description">
+              <h3>
+                Пицца неаполитана,
+                <sapn class="pizza-size">26</sapn>
+                см
+              </h3>
+              <p class="text">
+                Манящая, свежая, аппетитная классическая Неаполитана скрасит любой вечер в любой компании.
+              </p>
+              <p class="composition">
+                <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+              </p>
+            </div>
+            <div class="button">
+              <span class="quantity">Количесво:</span>
+              <input class="number" type="text" placeholder="1">
+              <div href="#" class="btn">
+                <i class="fas fa-check"></i>
+                <span class="choose">Выбрать</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
-</main>
+</section>
 
-<section class="snacks-section" style="background-image: url(images/salat.jpg)">
-  <div class="container section">
-
-    <div class="scroll-btn">
-      <i class="fas fa-angle-double-down"></i>
-    </div>
+<section class="snacks" style="background-image: url(images/salat.jpg)">
+  <div class="scroll-button">
+    <i class="fas fa-angle-double-down"></i>
+  </div>
+  <div class="container">
 
     <div class="section-header white">
-      <h2>
-        Выбрать закуски
-      </h2>
+      <h2 class="h2">Выберите закуски</h2>
       <p>
         Не забудьте выбрать свежие закуски и салаты от нашего шеф-повара,
         которые гармонично дополнят ваше меню сегодня.
       </p>
     </div>
 
-    <div class="snacks-slider">
-      <div class="snacks-slider-item">
-        <div class="presentation">
-          <img src="images/salat1.jpg" alt="Салат">
+    <div class="snack-slider">
+
+      <div class="snack">
+        <div class="photo">
+          <img src="images/salat1.jpg" alt="">
         </div>
-        <div class="snacks-description">
+        <div class="description">
 
           <div class="price">
             <p class="weight"><span>125</span> p.</p>
@@ -579,11 +540,66 @@
           </div>
         </div>
       </div>
-      <div class="snacks-slider-item">
-        <div class="presentation">
-          <img src="images/salat1.jpg" alt="Салат">
+
+      <div class="snack">
+        <div class="photo">
+          <img src="images/salat2.jpg" alt="">
         </div>
-        <div class="snacks-description">
+        <div class="description">
+
+          <div class="price">
+            <p class="weight"><span>125</span> p.</p>
+            <p class=""><span>100</span> гр.</p>
+          </div>
+
+          <h3>Салат Монтекристо</h3>
+          <p class="text">Лучшее дополнение к любому столу из свежих овощей</p>
+          <p class="composition">
+            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+          </p>
+          <div class="button">
+            <span class="quantity">Количесво:</span>
+            <input class="number" type="text" placeholder="1">
+            <div href="#" class="btn">
+              <i class="fas fa-check"></i>
+              <span class="choose">Выбрать</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="snack">
+        <div class="photo">
+          <img src="images/salat3.jpg" alt="">
+        </div>
+        <div class="description">
+
+          <div class="price">
+            <p class="weight"><span>125</span> p.</p>
+            <p class=""><span>100</span> гр.</p>
+          </div>
+
+          <h3>Салат Оливье</h3>
+          <p class="text">Лучшее дополнение к любому столу из свежих овощей</p>
+          <p class="composition">
+            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
+          </p>
+          <div class="button">
+            <span class="quantity">Количесво:</span>
+            <input class="number" type="text" placeholder="1">
+            <div href="#" class="btn">
+              <i class="fas fa-check"></i>
+              <span class="choose">Выбрать</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="snack">
+        <div class="photo">
+          <img src="images/salat1.jpg" alt="">
+        </div>
+        <div class="description">
 
           <div class="price">
             <p class="weight"><span>125</span> p.</p>
@@ -605,18 +621,19 @@
           </div>
         </div>
       </div>
-      <div class="snacks-slider-item">
-        <div class="presentation">
-          <img src="images/salat1.jpg" alt="Салат">
+
+      <div class="snack">
+        <div class="photo">
+          <img src="images/salat2.jpg" alt="">
         </div>
-        <div class="snacks-description">
+        <div class="description">
 
           <div class="price">
             <p class="weight"><span>125</span> p.</p>
             <p class=""><span>100</span> гр.</p>
           </div>
 
-          <h3>Салат Греческий</h3>
+          <h3>Салат Монтекристо</h3>
           <p class="text">Лучшее дополнение к любому столу из свежих овощей</p>
           <p class="composition">
             <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
@@ -631,18 +648,19 @@
           </div>
         </div>
       </div>
-      <div class="snacks-slider-item">
-        <div class="presentation">
-          <img src="images/salat1.jpg" alt="Салат">
+
+      <div class="snack">
+        <div class="photo">
+          <img src="images/salat3.jpg" alt="">
         </div>
-        <div class="snacks-description">
+        <div class="description">
 
           <div class="price">
             <p class="weight"><span>125</span> p.</p>
             <p class=""><span>100</span> гр.</p>
           </div>
 
-          <h3>Салат Греческий</h3>
+          <h3>Салат Оливье</h3>
           <p class="text">Лучшее дополнение к любому столу из свежих овощей</p>
           <p class="composition">
             <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
@@ -657,132 +675,25 @@
           </div>
         </div>
       </div>
-      <div class="snacks-slider-item">
-        <div class="presentation">
-          <img src="images/salat1.jpg" alt="Салат">
-        </div>
-        <div class="snacks-description">
 
-          <div class="price">
-            <p class="weight"><span>125</span> p.</p>
-            <p class=""><span>100</span> гр.</p>
-          </div>
-
-          <h3>Салат Греческий</h3>
-          <p class="text">Лучшее дополнение к любому столу из свежих овощей</p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-          <div class="button">
-            <span class="quantity">Количесво:</span>
-            <input class="number" type="text" placeholder="1">
-            <div href="#" class="btn">
-              <i class="fas fa-check"></i>
-              <span class="choose">Выбрать</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="snacks-slider-item">
-        <div class="presentation">
-          <img src="images/salat1.jpg" alt="Салат">
-        </div>
-        <div class="snacks-description">
-
-          <div class="price">
-            <p class="weight"><span>125</span> p.</p>
-            <p class=""><span>100</span> гр.</p>
-          </div>
-
-          <h3>Салат Греческий</h3>
-          <p class="text">Лучшее дополнение к любому столу из свежих овощей</p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-          <div class="button">
-            <span class="quantity">Количесво:</span>
-            <input class="number" type="text" placeholder="1">
-            <div href="#" class="btn">
-              <i class="fas fa-check"></i>
-              <span class="choose">Выбрать</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="snacks-slider-item">
-        <div class="presentation">
-          <img src="images/salat1.jpg" alt="Салат">
-        </div>
-        <div class="snacks-description">
-
-          <div class="price">
-            <p class="weight"><span>125</span> p.</p>
-            <p class=""><span>100</span> гр.</p>
-          </div>
-
-          <h3>Салат Греческий</h3>
-          <p class="text">Лучшее дополнение к любому столу из свежих овощей</p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-          <div class="button">
-            <span class="quantity">Количесво:</span>
-            <input class="number" type="text" placeholder="1">
-            <div href="#" class="btn">
-              <i class="fas fa-check"></i>
-              <span class="choose">Выбрать</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="snacks-slider-item">
-        <div class="presentation">
-          <img src="images/salat1.jpg" alt="Салат">
-        </div>
-        <div class="snacks-description">
-
-          <div class="price">
-            <p class="weight"><span>125</span> p.</p>
-            <p class=""><span>100</span> гр.</p>
-          </div>
-
-          <h3>Салат Греческий</h3>
-          <p class="text">Лучшее дополнение к любому столу из свежих овощей</p>
-          <p class="composition">
-            <strong>Состав:</strong> сыр, грибы, чеснок, острый перец, ещё длинное наименование
-          </p>
-          <div class="button">
-            <span class="quantity">Количесво:</span>
-            <input class="number" type="text" placeholder="1">
-            <div href="#" class="btn">
-              <i class="fas fa-check"></i>
-              <span class="choose">Выбрать</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
   </div>
 </section>
 
-<section class="drinks-section">
-
-  <div class="container section">
-
-    <div class="scroll-btn">
-      <i class="fas fa-angle-double-down"></i>
-    </div>
+<section class="drinks">
+  <div class="section">
 
     <div class="section-header">
-      <h2>Выбрать напитки</h2>
-      <p>Что может быть лучше освежающего газированного напитка в
-        дополнение к горячей ароматной пицце.</p>
+      <h2 class="h2">Выберите напитки</h2>
+      <p>
+        Что может быть лучше освежающего газированного напитка
+        в дополнение к горячей ароматной пицце.
+      </p>
     </div>
 
     <div class="drinks-slider">
 
-      <div class="drinks-slider-item">
+      <div class="drinks-slide">
         <div class="image">
           <img src="images/sprite.png" alt="">
         </div>
@@ -800,7 +711,7 @@
         </div>
       </div>
 
-      <div class="drinks-slider-item">
+      <div class="drinks-slide">
         <div class="image">
           <img src="images/sprite.png" alt="">
         </div>
@@ -818,7 +729,7 @@
         </div>
       </div>
 
-      <div class="drinks-slider-item">
+      <div class="drinks-slide">
         <div class="image">
           <img src="images/sprite.png" alt="">
         </div>
@@ -836,7 +747,7 @@
         </div>
       </div>
 
-      <div class="drinks-slider-item">
+      <div class="drinks-slide">
         <div class="image">
           <img src="images/sprite.png" alt="">
         </div>
@@ -853,354 +764,82 @@
           </div>
         </div>
       </div>
-
-      <div class="drinks-slider-item">
-        <div class="image">
-          <img src="images/sprite.png" alt="">
-        </div>
-        <div class="text">
-          <h3>Спрайт, 1,5 л.</h3>
-          <p>86 руб.</p>
-        </div>
-        <div class="button">
-          <span class="quantity">Количесво:</span>
-          <input class="number" type="text" placeholder="1">
-          <div href="#" class="btn">
-            <i class="fas fa-check"></i>
-            <span class="choose">Выбрать</span>
-          </div>
-        </div>
-      </div>
-
 
     </div>
 
   </div>
 </section>
 
-<section class="delivery-section" style="background-image: url(images/flour.jpg)">
-  <div class="container section">
-
-    <div class="scroll-btn">
-      <i class="fas fa-angle-double-down"></i>
-    </div>
-
-    <div class="section-header white">
-      <h2>Доставка и оплата</h2>
-      <p>Не зависимо от того, какой сейчас час, какая погода и как далеко вы
-        живете - наша оперативная доставка с радостью привезет вам заказ
-        в любое время и по любому адресу г. Москвы.</p>
-    </div>
-  </div>
-</section>
-
-<section class="order-section">
-  <div class="container section">
-    <div class="row">
-      <div class="order-form-block">
-        <div class="section-header">
-          <h2>Адрес и время доставки</h2>
-          <p>Пожалуйста, выберите удобную дату и время доставки, введите ваш полный адрес и телефон, чтобы мы могли
-            убедиться в том, что ваш заказ нашел вас:</p>
-        </div>
-
-        <form action="" class="order-form">
-          <label for="">
-            <span>Дата доставки:</span>
-            <input type="text" class="form-date">
-          </label>
-          <label for="">
-            <span>Время доставки:</span>
-            <input type="text" class="form-time">
-          </label>
-
-          <label for="">
-            <span>Ваше имя:</span>
-            <input type="text" class="form-name">
-          </label>
-
-          <label for="">
-            <span>Ваш телефон:</span>
-            <input type="text" class="form-phone">
-          </label>
-
-          <label for="" class="form-address">
-            <span>Адрес доставки:</span>
-            <input type="text" class="address">
-          </label>
-
-          <label for="" class="form-comment">
-            <span>Комментарий к заказу:</span>
-            <textarea name="" class="comment"></textarea>
-          </label>
-
-        </form>
-      </div>
-
-      <div class="checkout">
-        <div class="checkout-block">
-          <h2>ваш заказ</h2>
-          <ul class="checkout-list">
-            <!-- сделать скрипт который будет сокращать строчку с названием продукта если она не влазит -->
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-            <li class="checkout-item">
-              <a href="#" class="remove-btn">
-                <i class="fas fa-times-circle"></i>
-              </a>
-              <p class="product">
-                Пицца "Пепперони"
-              </p>
-              <p class="dots">
-                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
-              <p class="price">
-                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
-              </p>
-            </li>
-          </ul>
-          <h2 class="sum">И того: 21 450 руб.</h2>
-          <div class="buttons-block">
-            <a href="#" class="reset btn">
-              <i class="fas fa-times"></i>
-              <span>сбросить</span>
-            </a>
-            <a href="#" class="issue btn">
-              <i class="fas fa-check"></i>
-              <span>Оформить</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer-section" style="background-image: url(images/flour.jpg)">
+<section class="garantis">
   <div class="container">
-    <div class="row">
-
-      <div class="footer-contacts-block">
-        <h3>
-          Пицца на дом
-        </h3>
-        <p>
-          Моментальная доставка свежей горячей пиццы прямо к вам одмой
-          или в офис.
-        </p>
-        <ul class="contacts-list">
-          <li class="contacts-item contacts-mail">
-            <i class="far fa-envelope"></i>
-            <p>pizzanadom@yandex.ru</p>
-          </li>
-          <li class="contacts-item contacts-phone">
-            <i class="fas fa-phone"></i>
-            <p>+7(999)999-99-99</p>
-          </li>
-          <li class="contacts-item contacts-address">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>Москва. Коломеское ш. дом 46а, оф. 345</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-menu">
-        <h3>
-          Заказать:
-        </h3>
-        <ul class="header-menu">
-          <li class="header-menu-item"><a href="#">
-            <div class="mark"><i class="fas fa-chevron-right"></i></div>
-            Начало</a></li>
-          <li class="header-menu-item"><a href="#">
-            <div class="mark"><i class="fas fa-chevron-right"></i></div>
-            Выбрать пиццу</a></li>
-          <li class="header-menu-item"><a href="#">
-            <div class="mark"><i class="fas fa-chevron-right"></i></div>
-            Выбрать закуску</a></li>
-          <li class="header-menu-item"><a href="#">
-            <div class="mark"><i class="fas fa-chevron-right"></i></div>
-            Выбрать напитки</a></li>
-        </ul>
-
-        <a href="#" class="request-btn">
-          Сделать заявку
-        </a>
-      </div>
-
-      <div class="footer-gallery">
-        <h3>
-          Галерея Instagram:
-        </h3>
-
-        <div class="gallery">
-          <div class="gallery-item">
-            <img src="images/salat1.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-          <div class="gallery-item">
-            <img src="images/salat2.jpg" alt="">
-          </div>
-        </div>
-
-      </div>
-
-      <div class="footer-networks">
-        <h3>
-          Мы в соц. сетях
-        </h3>
-        <ul class="header-menu">
-          <li class="header-menu-item"><a href="#">
-            <div class="mark"><i class="fab fa-facebook-f"></i></div>
-            Facebook</a></li>
-          <li class="header-menu-item"><a href="#">
-            <div class="mark"><i class="fab fa-twitter"></i></div>
-            Twitter</a></li>
-          <li class="header-menu-item"><a href="#">
-            <div class="mark"><i class="fab fa-vk"></i></div>
-            Вконтакте</a></li>
-          <li class="header-menu-item"><a href="#">
-            <div class="mark"><i class="fab fa-linkedin-in"></i></div>
-            Linkedin</a></li>
-        </ul>
-      </div>
-
+    <div class="section-header white">
+      <h2>
+        Доставка и оплата
+      </h2>
+      <p>
+        Не зависимо от тог, какой сейчас час, какая погода и как далеко вы живёте - наша оперативная доставка с радостью привезет вам заказ в любое время и по любому адресу г.Москва.
+      </p>
     </div>
   </div>
-</footer>
+</section>
+
+<section class="checkout">
+  <div class="container">
+
+    <div class="checkout-form">
+
+      <div class="section-header">
+        <h2>
+          Адрес и время доставки
+        </h2>
+        <p>
+          Пожалуйста, выберите удобную дату и время доставки, введите ваш полный адрес и телефон, чтобы мы могли убедиться в том, что ваш заказ нашел вас:
+        </p>
+      </div>
+
+      <form action="" class="form">
+
+        <div class="form-item form-date">
+          <span>Дата доставки:</span>
+          <input type="text">
+        </div>
+
+        <div class="form-item form-time">
+          <span>Время доставки:</span>
+          <input type="text">
+        </div>
+
+        <div class="form-item form-client-name">
+          <span>Ваше имя:</span>
+          <input type="text">
+        </div>
+
+        <div class="form-item form-client-phone">
+          <span>Ваш телефон:</span>
+          <input type="text">
+        </div>
+
+        <div class="form-item form-address">
+          <span>Адрес доставки:</span>
+          <input type="text">
+        </div>
+
+        <div class="form-item form-comment">
+          <span>Комментарий к заказу:</span>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
 
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="scripts/main.js"></script>
+
 </body>
 </html>
