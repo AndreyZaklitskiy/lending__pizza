@@ -7,7 +7,8 @@
   <title>webapp</title>
 
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="styles/main.css">
 
 </head>
@@ -23,7 +24,7 @@
         </a>
       </div>
 
-      <div class="col-md-7">
+      <!--<div class="col-md-7">
         <ul class="menu">
           <li class="menu-item"><a href="#">
             <div class="arr"><i class="fas fa-chevron-right"></i></div>
@@ -38,9 +39,9 @@
             <div class="arr"><i class="fas fa-chevron-right"></i></div>
             <span>Выбрать напитки</span></a></li>
         </ul>
-      </div>
+      </div>-->
 
-      <div class="col-md-3">
+      <!--<div class="col-md-3">
         <div class="phone">
           <p class="order">Заказать по телефону:</p>
           <div class="phone-number">
@@ -48,7 +49,7 @@
             <p class="number"><span>+7 (495)</span> 923-35-74</p>
           </div>
         </div>
-      </div>
+      </div>-->
 
     </div>
   </div>
@@ -57,34 +58,93 @@
 <section class="offers" style="background-image: url(images/bg.jpg)">
 
   <div class="container">
-    <div class="top-slider">
-      <div class="offer">
+    <div class="offers-slider">
+      <div class="offers-slider_item ">
         <div class="row">
-          <div class="col-md-4 col-md-offset-1">
-            <h1 class="h1">
-              Пицца неаполитана
-            </h1>
-            <p>
-              Великолепная, пикантная, горячая итальянская пицца с аппетитным французким сыром.
-            </p>
-            <div class="button">
-              <span class="quantity">Количесво:</span>
-              <input class="number" type="text" placeholder="1">
-              <a href="#" class="btn">
-                <i class="fas fa-check"></i>
-                <span class="choose">Выбрать</span>
-              </a>
+          <div class="col-sm-4 offset-sm-1">
+            <div class="offers-slider_item__text">
+              <h1 class="h1">
+                Пицца неаполитана
+              </h1>
+              <p>
+                Великолепная, пикантная, горячая итальянская пицца с аппетитным французким сыром.
+              </p>
+              <div class="button">
+                <span class="quantity">Количесво:</span>
+                <input class="number" type="text" placeholder="1">
+                <a href="#" class="btn">
+                  <i class="fas fa-check"></i>
+                  <span class="choose">Выбрать</span>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 col-md-offset-1">
-            <img src="images/neapolitana.png" alt="Пицца неаполитана">
+          <div class="col-sm-6">
+            <div class="offers-slider_item__img">
+              <img src="images/neapolitana.png" alt="Пицца неаполитана">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="offer">
+      <div class="offers-slider_item ">
         <div class="row">
-          <div class="col-md-4 col-md-offset-1">
+          <div class="col-sm-4 offset-sm-1">
+            <div class="offers-slider_item__text">
+              <h1 class="h1">
+                Пицца пеперони
+              </h1>
+              <p>
+                Дьявольски острая пицца. Свинная салями с красным жгучим перцем и грибами.
+              </p>
+              <div class="button">
+                <span class="quantity">Количесво:</span>
+                <input class="number" type="text" placeholder="1">
+                <a href="#" class="btn">
+                  <i class="fas fa-check"></i>
+                  <span class="choose">Выбрать</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="offers-slider_item__img">
+              <img src="images/pepperony.png" alt="Пицца пеперони">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="offers-slider_item ">
+        <div class="row">
+          <div class="col-sm-4 offset-sm-1">
+            <div class="offers-slider_item__text">
+              <h1 class="h1">
+                Пицца Тропикана
+              </h1>
+              <p>
+                Необычная пицца, сочные ананасы, нежная куриная грудка, томатный соус и сыр.
+              </p>
+              <div class="button">
+                <span class="quantity">Количесво:</span>
+                <input class="number" type="text" placeholder="1">
+                <a href="#" class="btn">
+                  <i class="fas fa-check"></i>
+                  <span class="choose">Выбрать</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="offers-slider_item__img">
+              <img src="images/tropicana.png" alt="Пицца тропикана">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="offers_slider__item offer">
+        <div class="row">
+          <div class="col-md-4 offset-md-1">
             <h1 class="h1">
               Пицца пеперони
             </h1>
@@ -100,15 +160,15 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 col-md-offset-1">
+          <div class="col-md-6">
             <img src="images/pepperony.png" alt="Пицца неаполитана">
           </div>
         </div>
       </div>
 
-      <div class="offer">
+      <div class="offers_slider__item offer">
         <div class="row">
-          <div class="col-md-4 col-md-offset-1">
+          <div class="col-md-4 offset-md-1">
             <h1 class="h1">
               Пицца Тропикана
             </h1>
@@ -124,11 +184,11 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 col-md-offset-1">
+          <div class="col-md-4">
             <img src="images/tropicana.png" alt="Пицца неаполитана">
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </section>
@@ -145,7 +205,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-10 offset-md-1">
         <div class="pizza-slider">
 
           <div class="pizza">
@@ -777,7 +837,8 @@
         Доставка и оплата
       </h2>
       <p>
-        Не зависимо от тог, какой сейчас час, какая погода и как далеко вы живёте - наша оперативная доставка с радостью привезет вам заказ в любое время и по любому адресу г.Москва.
+        Не зависимо от тог, какой сейчас час, какая погода и как далеко вы живёте - наша оперативная доставка с радостью
+        привезет вам заказ в любое время и по любому адресу г.Москва.
       </p>
     </div>
   </div>
@@ -793,7 +854,8 @@
           Адрес и время доставки
         </h2>
         <p>
-          Пожалуйста, выберите удобную дату и время доставки, введите ваш полный адрес и телефон, чтобы мы могли убедиться в том, что ваш заказ нашел вас:
+          Пожалуйста, выберите удобную дату и время доставки, введите ваш полный адрес и телефон, чтобы мы могли
+          убедиться в том, что ваш заказ нашел вас:
         </p>
       </div>
 

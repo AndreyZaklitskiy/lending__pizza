@@ -1,11 +1,8 @@
-
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
-// endbower
 
-//@import "../../bower_components/Font-Awesome/web-fonts-with-css/css/fontawesome-all.min.css";
-@import "../../node_modules/font-awesome/scss/font-awesome";
+//@import "../../node_modules/font-awesome/scss/font-awesome";
 
 // modules & sections
 
@@ -19,14 +16,12 @@
 @import "sections/head-section";
 
 
-
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
-
 
 
 html {
@@ -56,6 +51,7 @@ h1, .h1 {
   font-size: 52px;
   color: $white;
 }
+
 h2, .h2 {
   font-family: $menu-font;
   font-size: 24px;
@@ -63,6 +59,7 @@ h2, .h2 {
   color: $black;
   text-align: center;
 }
+
 h3, .h3 {
   text-transform: uppercase;
   font-size: 18px;
@@ -70,6 +67,7 @@ h3, .h3 {
   font-weight: normal;
   color: $black;
 }
+
 p {
   font-family: $text-font;
   font-size: 16px;
@@ -97,6 +95,7 @@ p {
     transition: all .5s;
 
   }
+
   input.number {
     display: none;
     width: 40px;
@@ -120,15 +119,19 @@ p {
 .button.active {
   cursor: default;
   width: 200px;
+
   .quantity {
     display: inline-block;
   }
+
   .number {
     display: inline-block;
   }
+
   .btn {
     cursor: pointer;
     padding: 17px 16px 8px 17px;
+
     .choose {
       display: none;
     }
@@ -149,6 +152,7 @@ p {
 
 .choose-btn {
   @extend .btn;
+
   .fas {
     margin-right: 8px;
   }
@@ -175,6 +179,7 @@ p {
   height: 58px;
   border-radius: 50%;
   background-color: $accent-light;
+
   .fas {
     margin-left: 22px;
     line-height: 2.4;
@@ -191,9 +196,11 @@ header {
   left: 0;
   width: 100%;
   z-index: 2;
+
   .container {
     padding: 30px 0;
   }
+
   &:before {
     content: '';
     position: absolute;
@@ -214,16 +221,19 @@ header {
     margin-top: 80px;
     margin-bottom: 40px;
   }
+
   p {
     text-align: center;
     width: 550px;
     margin-right: auto;
     margin-left: auto;
   }
+
   &.white {
     h2 {
       color: $white;
     }
+
     p {
       color: $white;
 
@@ -236,15 +246,18 @@ header {
 .menu {
   z-index: 3;
   margin-top: 15px;
+
   &-item {
     display: inline-block;
     margin-right: 45px;
+
     a {
       display: inline-block;
       font-size: 12px;
       font-family: $menu-font;
       color: $white;
       text-transform: uppercase;
+
       .arr {
         color: #67635E;
         display: inline-block;
@@ -261,20 +274,25 @@ header {
           font-size: 11px;
         }
       }
+
       span {
         text-decoration: underline;
       }
     }
+
     &:last-child {
       margin-right: 0;
     }
+
     &:hover {
-      a>.arr {
+      a > .arr {
         background-color: $accent;
+
         .fas {
           color: $black;
         }
       }
+
       span {
         color: $accent;
         text-decoration: none;
@@ -287,12 +305,14 @@ header {
 .phone {
   margin-top: 5px;
   text-align: right;
+
   .order {
     color: $white;
     opacity: 0.35;
     font-size: 12px;
     letter-spacing: 1.5px;
   }
+
   &-number {
     .fas {
       display: inline-block;
@@ -301,12 +321,14 @@ header {
       margin-right: 2px;
       margin-top: -2px;
     }
+
     .number {
       display: inline-block;
       font-family: $phone-font;
       font-size: 24px;
       color: $white;
       letter-spacing: .5px;
+
       span {
         font-size: 16px;
       }
@@ -318,13 +340,15 @@ header {
 //предложения
 .offers {
   position: relative;
-  height: 860px;
+  min-height: 100vh;
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   .container {
     margin-top: 113px;
+    height: 100%;
+
   }
   &::before {
     content: '';
@@ -335,12 +359,30 @@ header {
     opacity: .3;
   }
 }
-//горячие предложения
-.top-slider {
-  margin: 65px 0 65px;
-  .offer {
+//------------header slider-------------
+.offers-slider {
+
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  //padding: 65px 0 65px;
+  &_item {
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  &_item__text {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .h1 {
-      margin-top: 126px;
       margin-bottom: 30px;
       text-transform: capitalize;
     }
@@ -350,12 +392,28 @@ header {
       color: $white;
       line-height: 1.5;
     }
-    img {
-      width: 500px;
-      height: 500px;
+    .button {
+      //position: relative;
+      //z-index: 5;
     }
   }
-  //  стрелки верхнего слайдера
+  &_item__img {
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    img {
+      animation: pizza-rotation 100s normal infinite;
+    }
+  }
+@keyframes pizza-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
   .slick-arrow, .slick-next, .slick-prev {
     width: 50px;
     height: 50px;
@@ -376,8 +434,10 @@ header {
       left: 0;
       top: 0;
     }
+
     &:hover {
       color: $white;
+
       &::before {
         opacity: 0.2;
         background-color: $accent;
@@ -385,11 +445,46 @@ header {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .offers-slider_item__img {
+
+    img {
+      margin: auto 0 0;
+    }
+  }
+}
+
+
+//горячие предложения
+/*.top-slider {
+  margin: 65px 0 65px;
+  .offer {
+    .h1 {
+      margin-top: 126px;
+      margin-bottom: 30px;
+      text-transform: capitalize;
+    }
+    p {
+      margin-bottom: 35px;
+      max-width: 260px;
+      color: $white;
+      line-height: 1.5;
+    }
+    img {
+      width: 500px;
+      height: 500px;
+    }
+  }*/
+//  стрелки верхнего слайдера
+
+
 .slick-prev {
   i.fas {
     margin-right: 5px;
   }
 }
+
 .slick-next {
   i.fas {
     margin-left: 5px;
@@ -400,13 +495,16 @@ header {
   z-index: 10;
   background-color: #f4f4f4;
   position: relative;
+
   .container {
     margin-top: -100px;
     background-color: #fff;
     position: relative;
   }
+
   .row {
     position: relative;
+
     .col-md-10 {
       position: static;
     }
@@ -416,13 +514,16 @@ header {
 .pizza {
   width: 280px;
   margin-left: 22px;
+
   &-slider {
     position: static;
     padding-top: 20px;
     padding-bottom: 20px;
+
     &.slick-slider {
       margin-bottom: 100px;
     }
+
     .slick-arrow, .slick-prev, .slick-next {
       background-color: $accent;
       width: 47px;
@@ -430,33 +531,41 @@ header {
       color: white;
       font-size: 24px;
       top: 150px;
+
       &:before {
         content: '';
       }
+
       &:hover {
         background-color: $accent-light;
       }
     }
+
     .slick-prev {
       left: 0;
       border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+
       .fas {
         margin-right: 7px;
       }
     }
+
     .slick-next {
       right: 0;
       border-radius: 100% 0 0 100% / 50% 0 0 50%;
+
       .fas {
         margin-left: 7px;
       }
     }
   }
+
   &-offer {
     background-repeat: no-repeat;
     background-position: center;
     padding: 40px 0 30px;
   }
+
   &-image {
     width: 205px;
     height: 205px;
@@ -464,9 +573,11 @@ header {
     margin-right: 40px;
     margin-bottom: 25px;
   }
+
   &-data {
     position: relative;
   }
+
   //цена пиццы
   &-price {
     width: 135px;
@@ -483,45 +594,55 @@ header {
     font-size: 24px;
     background-color: $accent;
   }
+
   &-description {
     margin-top: 30px;
+
     h3 {
       margin-bottom: 30px;
       padding-bottom: 20px;
       border-bottom: 1px solid $accent;
     }
+
     p {
       padding-bottom: 25px;
     }
+
     .composition {
       color: $grey;
       padding-bottom: 33px;
     }
   }
+
   .choose-btn {
     position: absolute;
     bottom: 0;
   }
+
   &:first-child {
     margin-left: 0;
   }
 }
+
 ul.slick-dots {
   position: absolute;
   bottom: 0;
   left: 0;
   margin-bottom: 77px;
+
   li {
     height: 15px;
     width: 15px;
     background-color: lighten($accent, 10%);
     border-radius: 30px;
+
     button {
       &:before {
         content: ' ';
       }
     }
   }
+
   li.slick-active {
     background-color: $accent;
   }
@@ -541,6 +662,7 @@ ul.slick-dots {
   font-family: $phone-font;
   line-height: 2.1;
   cursor: pointer;
+
   &-26 {
     margin-left: 30px;
     width: 45px;
@@ -548,6 +670,7 @@ ul.slick-dots {
     border: 5px solid $accent-light;
     font-size: 16px;
   }
+
   &-32 {
     margin-left: 10px;
     width: 54px;
@@ -555,6 +678,7 @@ ul.slick-dots {
     border: 6px solid $accent-light;
     font-size: 20px;
   }
+
   &.selected {
     background-color: $accent;
   }
@@ -565,11 +689,13 @@ section.snacks {
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
+
   .container {
     z-index: 2;
     position: relative;
     padding-bottom: 75px;
   }
+
   &:before {
     content: '';
     z-index: 2;
@@ -604,17 +730,21 @@ section.snacks {
       left: 0;
       top: 0;
     }
+
     &:hover {
       color: $white;
+
       &::before {
         opacity: 0.2;
         background-color: $accent;
       }
     }
   }
+
   .slick-prev {
     left: -4%;
   }
+
   .slick-next {
     right: -4%;
   }
@@ -622,48 +752,58 @@ section.snacks {
   ul.slick-dots {
     bottom: 0;
     margin-bottom: 0;
+
     li {
       height: 15px;
       width: 15px;
       opacity: 0.4;
       background-color: white;
       border-radius: 30px;
+
       button {
         &:before {
           content: ' ';
         }
       }
     }
+
     li.slick-active {
       opacity: 1;
       background-color: $accent;
     }
   }
 }
+
 .snack {
   position: relative;
   background-color: $white;
   margin: 0 15px 68px;
+
   .photo {
 
   }
+
   img {
     width: 260px;
     height: 180px;
   }
+
   .description {
     background-color: $white;
     width: 260px;
     position: relative;
     padding-top: 50px;
     text-align: center;
+
     .button {
       width: 100%;
+
       .number {
         margin-left: auto;
       }
     }
   }
+
   .price {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -680,14 +820,17 @@ section.snacks {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+
     p {
       color: $white;
       font-size: 12px;
       text-align: center;
+
       span {
         font-family: $menu-font;
       }
     }
+
     .weight {
       padding-bottom: 4px;
     }
@@ -696,13 +839,16 @@ section.snacks {
   h3 {
     padding-bottom: 10px;
   }
+
   p {
     font-size: 13px;
   }
+
   p.text {
     line-height: 24px;
     padding: 0 30px 10px;
   }
+
   p.composition {
     background-color: #f2f2f2;
     line-height: 24px;
@@ -714,6 +860,7 @@ section.snacks {
   .container {
     text-align: center;
   }
+
   .section-header {
     padding-bottom: 100px;
   }
@@ -740,41 +887,51 @@ section.snacks {
         left: 0;
         top: 0;
       }
+
       &:hover {
         color: $white;
+
         &::before {
           opacity: 0.2;
           background-color: $accent;
         }
       }
     }
+
     .slick-prev {
       left: -4%;
     }
+
     .slick-next {
       right: -4%;
     }
 
   }
+
   &-slide {
     margin: auto;
     position: relative;
     width: 204px !important;
     text-align: center;
     margin: 0 50px;
+
     .image {
       margin-bottom: 55px;
     }
+
     img {
       margin: 0 auto;
       height: 285px;
     }
+
     .text {
       margin-bottom: 30px;
+
       h3 {
         color: #333333;
         padding-bottom: 18px;
       }
+
       p {
         font-family: $name-font;
         color: #999999;
@@ -784,6 +941,7 @@ section.snacks {
 
     .button {
       width: 100%;
+
       .number {
         margin-left: auto;
       }
@@ -796,9 +954,11 @@ section.snacks {
   background-position: top;
   -webkit-background-size: cover;
   background-size: cover;
+
   .section-header {
     padding-top: 90px;
     padding-bottom: 70px;
+
     p {
       margin-top: 40px;
       line-height: 28px;
@@ -809,6 +969,7 @@ section.snacks {
 
 .checkout {
   @extend .col-md-7;
+
   .container {
     margin: 80px auto;
   }
@@ -817,10 +978,12 @@ section.snacks {
 .checkout-form {
   .section-header {
     margin-bottom: 60px;
+
     h2 {
       text-align: left;
       padding-bottom: 30px;
     }
+
     p {
       width: auto;
       max-width: 620px;
@@ -831,6 +994,7 @@ section.snacks {
       line-height: 28px;
     }
   }
+
   //форма
   .form {
     &-item {
@@ -839,8 +1003,6 @@ section.snacks {
   }
 
 }
-
-
 
 
 /* media */
