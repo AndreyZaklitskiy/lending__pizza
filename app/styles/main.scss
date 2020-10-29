@@ -2,7 +2,6 @@
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 
-
 // modules & sections
 
 @import "modules/sprite";
@@ -38,9 +37,11 @@ body {
 }
 
 /* отступы секций */
+/*
 .section {
   margin: 80px 0;
 }
+*/
 
 h1, .h1 {
   font-family: $isadora;
@@ -69,6 +70,34 @@ p {
   font-size: 16px;
   color: $black;
 }
+
+.section-header {
+  .h2 {
+    color: $black;
+    font-family: $header-font;
+    text-transform: uppercase;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  p {
+    text-align: center;
+    width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &.white {
+    h2 {
+      color: $white;
+    }
+
+    p {
+      color: $white;
+    }
+  }
+}
+
 
 .button {
   cursor: pointer;
@@ -148,6 +177,7 @@ p {
 
 .choose-btn {
   @extend .btn;
+
   .fas {
     margin-right: 8px;
   }
@@ -174,6 +204,7 @@ p {
   height: 58px;
   border-radius: 50%;
   background-color: $accent-light;
+
   .fas {
     margin-left: 22px;
     line-height: 2.4;
@@ -186,140 +217,9 @@ p {
 /*---------SECTIONS-------*/
 @import "sections/header";
 @import "sections/offers";
+@import "sections/pizza-slider";
 
 
-.choose-pizza {
-  z-index: 10;
-  background-color: #f4f4f4;
-  position: relative;
-
-  .container {
-    margin-top: -100px;
-    background-color: #fff;
-    position: relative;
-  }
-
-  .row {
-    position: relative;
-
-    .col-md-10 {
-      position: static;
-    }
-  }
-}
-
-.pizza {
-  width: 280px;
-  margin-left: 22px;
-
-  &-slider {
-    position: static;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    &.slick-slider {
-      margin-bottom: 100px;
-    }
-
-    .slick-arrow, .slick-prev, .slick-next {
-      background-color: $accent;
-      width: 47px;
-      height: 100px;
-      color: white;
-      font-size: 24px;
-      top: 150px;
-
-      &:before {
-        content: '';
-      }
-
-      &:hover {
-        background-color: $accent-light;
-      }
-    }
-
-    .slick-prev {
-      left: 0;
-      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-
-      .fas {
-        margin-right: 7px;
-      }
-    }
-
-    .slick-next {
-      right: 0;
-      border-radius: 100% 0 0 100% / 50% 0 0 50%;
-
-      .fas {
-        margin-left: 7px;
-      }
-    }
-  }
-
-  &-offer {
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 40px 0 30px;
-  }
-
-  &-image {
-    width: 205px;
-    height: 205px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 25px;
-  }
-
-  &-data {
-    position: relative;
-  }
-
-  //цена пиццы
-  &-price {
-    width: 135px;
-    height: 45px;
-    line-height: 1;
-    text-align: center;
-    top: 3px;
-    right: -16px;
-    display: inline-block;
-    position: absolute;
-    padding: 10px 10px 10px;
-    color: $white;
-    font-family: $phone-font;
-    font-size: 24px;
-    background-color: $accent;
-  }
-
-  &-description {
-    margin-top: 30px;
-
-    h3 {
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid $accent;
-    }
-
-    p {
-      padding-bottom: 25px;
-    }
-
-    .composition {
-      color: $grey;
-      padding-bottom: 33px;
-    }
-  }
-
-  .choose-btn {
-    position: absolute;
-    bottom: 0;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-}
 
 ul.slick-dots {
   position: absolute;
@@ -349,37 +249,12 @@ ul.slick-dots {
   margin-top: auto;
 }
 
-.size {
-  display: inline-block;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  text-align: center;
-  color: $white;
-  font-family: $phone-font;
-  line-height: 2.1;
-  cursor: pointer;
 
-  &-26 {
-    margin-left: 30px;
-    width: 45px;
-    height: 45px;
-    border: 5px solid $accent-light;
-    font-size: 16px;
-  }
 
-  &-32 {
-    margin-left: 10px;
-    width: 54px;
-    height: 54px;
-    border: 6px solid $accent-light;
-    font-size: 20px;
-  }
 
-  &.selected {
-    background-color: $accent;
-  }
-}
+
+
+
 
 section.snacks {
   position: relative;

@@ -2,6 +2,7 @@
 .offers {
   position: relative;
   min-height: 100vh;
+  padding-bottom: 100px;
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
@@ -14,8 +15,13 @@
   &::before {
     content: '';
     position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
+
     background-color: black;
     opacity: .3;
   }
@@ -58,14 +64,7 @@
       animation: pizza-rotation 100s normal infinite;
     }
   }
-  @keyframes pizza-rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+
   .slick-arrow, .slick-next, .slick-prev {
     width: 50px;
     height: 50px;
@@ -106,6 +105,16 @@
   }
 }
 
+@keyframes pizza-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*----MEDIA----*/
 @media (max-width: 768px) {
   .offers-slider_item__img {
     img {
