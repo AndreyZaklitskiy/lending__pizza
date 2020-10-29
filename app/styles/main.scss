@@ -2,7 +2,6 @@
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 
-//@import "../../node_modules/font-awesome/scss/font-awesome";
 
 // modules & sections
 
@@ -11,9 +10,6 @@
 @import "reset";
 @import "fonts";
 @import "variables";
-
-@import "sections/header";
-@import "sections/head-section";
 
 
 .browserupgrade {
@@ -152,7 +148,6 @@ p {
 
 .choose-btn {
   @extend .btn;
-
   .fas {
     margin-right: 8px;
   }
@@ -166,7 +161,7 @@ p {
 }
 
 .scroll-button {
-  z-index: 20;
+  z-index: 5;
   position: absolute;
   top: 0;
   right: 50%;
@@ -179,7 +174,6 @@ p {
   height: 58px;
   border-radius: 50%;
   background-color: $accent-light;
-
   .fas {
     margin-left: 22px;
     line-height: 2.4;
@@ -189,307 +183,10 @@ p {
   }
 }
 
-/* хэдер */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
+/*---------SECTIONS-------*/
+@import "sections/header";
+@import "sections/offers";
 
-  .container {
-    padding: 30px 0;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.35;
-    background-color: black;
-  }
-}
-
-.section-header {
-  .h2 {
-    color: $black;
-    font-family: $header-font;
-    text-transform: uppercase;
-    margin-top: 80px;
-    margin-bottom: 40px;
-  }
-
-  p {
-    text-align: center;
-    width: 550px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  &.white {
-    h2 {
-      color: $white;
-    }
-
-    p {
-      color: $white;
-
-    }
-  }
-}
-
-
-//главное меню
-.menu {
-  z-index: 3;
-  margin-top: 15px;
-
-  &-item {
-    display: inline-block;
-    margin-right: 45px;
-
-    a {
-      display: inline-block;
-      font-size: 12px;
-      font-family: $menu-font;
-      color: $white;
-      text-transform: uppercase;
-
-      .arr {
-        color: #67635E;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        border-radius: 50px;
-        text-align: center;
-        margin-right: 7px;
-
-        .fas {
-          line-height: 1.8;
-          font-size: 11px;
-        }
-      }
-
-      span {
-        text-decoration: underline;
-      }
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      a > .arr {
-        background-color: $accent;
-
-        .fas {
-          color: $black;
-        }
-      }
-
-      span {
-        color: $accent;
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-//номер телефона
-.phone {
-  margin-top: 5px;
-  text-align: right;
-
-  .order {
-    color: $white;
-    opacity: 0.35;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-  }
-
-  &-number {
-    .fas {
-      display: inline-block;
-      color: $accent;
-      font-size: 12px;
-      margin-right: 2px;
-      margin-top: -2px;
-    }
-
-    .number {
-      display: inline-block;
-      font-family: $phone-font;
-      font-size: 24px;
-      color: $white;
-      letter-spacing: .5px;
-
-      span {
-        font-size: 16px;
-      }
-    }
-  }
-}
-
-
-//предложения
-.offers {
-  position: relative;
-  min-height: 100vh;
-  background-position: center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  .container {
-    margin-top: 113px;
-    height: 100%;
-
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: .3;
-  }
-}
-//------------header slider-------------
-.offers-slider {
-
-  height: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
-  //padding: 65px 0 65px;
-  &_item {
-    position: relative;
-    img {
-      width: 100%;
-      height: auto;
-      margin: auto;
-    }
-  }
-
-  &_item__text {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .h1 {
-      margin-bottom: 30px;
-      text-transform: capitalize;
-    }
-    p {
-      margin-bottom: 35px;
-      max-width: 260px;
-      color: $white;
-      line-height: 1.5;
-    }
-    .button {
-      //position: relative;
-      //z-index: 5;
-    }
-  }
-  &_item__img {
-    z-index: 1;
-    height: 100%;
-    display: flex;
-    img {
-      animation: pizza-rotation 100s normal infinite;
-    }
-  }
-@keyframes pizza-rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-  .slick-arrow, .slick-next, .slick-prev {
-    width: 50px;
-    height: 50px;
-    font-size: 36px;
-    color: #706965;
-    background-color: transparent;
-    z-index: 2;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      background-color: transparent;
-      left: 0;
-      top: 0;
-    }
-
-    &:hover {
-      color: $white;
-
-      &::before {
-        opacity: 0.2;
-        background-color: $accent;
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .offers-slider_item__img {
-
-    img {
-      margin: auto 0 0;
-    }
-  }
-}
-
-
-//горячие предложения
-/*.top-slider {
-  margin: 65px 0 65px;
-  .offer {
-    .h1 {
-      margin-top: 126px;
-      margin-bottom: 30px;
-      text-transform: capitalize;
-    }
-    p {
-      margin-bottom: 35px;
-      max-width: 260px;
-      color: $white;
-      line-height: 1.5;
-    }
-    img {
-      width: 500px;
-      height: 500px;
-    }
-  }*/
-//  стрелки верхнего слайдера
-
-
-.slick-prev {
-  i.fas {
-    margin-right: 5px;
-  }
-}
-
-.slick-next {
-  i.fas {
-    margin-left: 5px;
-  }
-}
 
 .choose-pizza {
   z-index: 10;
