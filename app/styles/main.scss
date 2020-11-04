@@ -349,8 +349,6 @@ ul.slick-dots {
       padding: 10px 20px 8px;
     }
   }
-
-
   //  стрелки слайдера с закусками
   .slick-arrow, .slick-next, .slick-prev {
     width: 50px;
@@ -408,70 +406,36 @@ ul.slick-dots {
   }
 }
 
-
-
-
-
 .drinks {
   .container {
     text-align: center;
+    padding-bottom: 90px;
   }
   .section-header {
     padding-bottom: 100px;
   }
-  &-slider {
-    .slick-arrow, .slick-next, .slick-prev {
-      width: 50px;
-      height: 50px;
-      font-size: 36px;
-      color: #706965;
-      background-color: transparent;
-      z-index: 2;
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-        background-color: transparent;
-        left: 0;
-        top: 0;
-      }
-
-      &:hover {
-        color: $white;
-
-        &::before {
-          opacity: 0.2;
-          background-color: $accent;
-        }
-      }
-    }
-
-    .slick-prev {
-      left: -4%;
-    }
-
-    .slick-next {
-      right: -4%;
-    }
-
-  }
-
-  &-slide {
-    margin: auto;
+}
+.drinks-slider {
+  &_item {
     position: relative;
-    width: 204px !important;
+    width: 140px;
     text-align: center;
     margin: 0 50px;
+    padding: 25px 0;
+    transform: scale(.9);
+    transition: .3s;
+    opacity: 0;
+    &.slick-active {
+      opacity: 1;
+    }
+    &.slick-center {
+      transform: scale(1.1);
+      transition: .3s;
+    }
 
     .image {
       margin-bottom: 55px;
     }
-
     img {
       margin: 0 auto;
       height: 285px;
@@ -498,6 +462,52 @@ ul.slick-dots {
       .number {
         margin-left: auto;
       }
+    }
+  }
+
+  /*---slider-styles-----*/
+  .slick-arrow, .slick-next, .slick-prev {
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    color: #706965;
+    background-color: transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 2;
+    &:before {
+      content: '';
+    }
+    &:hover {
+      color: $white;
+      background-color: $accent;
+    }
+  }
+  .slick-prev {
+    left: -4%;
+  }
+  .slick-next {
+    right: -4%;
+  }
+}
+//@import "sections/drinks-section";
+@media (max-width: 992px) {
+  .drinks-slider_item {
+    margin: 0 15px;
+    padding: 0 0;
+    transform: scale(.7);
+    &.slick-center {
+      transform: scale(1);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .drinks-slider_item {
+    margin: 0 5px;
+
+    &.slick-center {
+
     }
   }
 }

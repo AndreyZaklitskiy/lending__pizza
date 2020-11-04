@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/scripts/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sections/_snacks-section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sections/_snacks-section.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       <workItem from="1604253018992" duration="592000" />
       <workItem from="1604327252925" duration="57000" />
       <workItem from="1604327453169" duration="595000" />
-      <workItem from="1604506487913" duration="5977000" />
+      <workItem from="1604506487913" duration="10389000" />
     </task>
     <servers />
   </component>
