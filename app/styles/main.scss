@@ -42,7 +42,9 @@ body {
   margin: 80px 0;
 }
 */
-
+section {
+  position: relative;
+}
 h1, .h1 {
   font-family: $isadora;
   font-size: 52px;
@@ -191,7 +193,7 @@ p {
 }
 
 .scroll-button {
-  z-index: 5;
+  z-index: 10;
   position: absolute;
   top: 0;
   right: 50%;
@@ -256,7 +258,7 @@ ul.slick-dots {
 
 
 
-section.snacks {
+.snacks {
   position: relative;
   background-position: center;
   -webkit-background-size: cover;
@@ -279,8 +281,76 @@ section.snacks {
   }
 }
 
-.snack-slider {
+.snacks-slider {
   margin-top: 65px;
+  &_item {
+    position: relative;
+    background-color: $white;
+    margin: 0 15px 68px;
+    //max-width: 260px;
+    &__photo {
+      height: 180px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__description {
+      background-color: $white;
+      position: relative;
+      padding-top: 50px;
+      text-align: center;
+      .button {
+        width: 100%;
+        .number {
+          margin-left: auto;
+        }
+      }
+    }
+    &__price {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: $accent-light;
+      width: 60px;
+      height: 60px;
+      padding-top: 13px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      text-align: center;
+      p {
+        color: $white;
+        font-size: 12px;
+        span {
+          font-family: $menu-font;
+        }
+      }
+      .weight {
+        padding-bottom: 4px;
+      }
+    }
+
+    h3 {
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 13px;
+    }
+    .snacks-slider_item__text {
+      line-height: 24px;
+      padding: 0 30px 10px;
+    }
+    .snacks-slider_item__composition {
+      background-color: #f2f2f2;
+      line-height: 24px;
+      padding: 10px 20px 8px;
+    }
+  }
+
+
   //  стрелки слайдера с закусками
   .slick-arrow, .slick-next, .slick-prev {
     width: 50px;
@@ -289,7 +359,6 @@ section.snacks {
     color: #706965;
     background-color: transparent;
     z-index: 2;
-
     &:before {
       content: '';
       position: absolute;
@@ -302,29 +371,23 @@ section.snacks {
       left: 0;
       top: 0;
     }
-
     &:hover {
       color: $white;
-
       &::before {
         opacity: 0.2;
         background-color: $accent;
       }
     }
   }
-
   .slick-prev {
-    left: -4%;
+    left: -5%;
   }
-
   .slick-next {
-    right: -4%;
+    right: -5%;
   }
-
   ul.slick-dots {
     bottom: 0;
     margin-bottom: 0;
-
     li {
       height: 15px;
       width: 15px;
@@ -338,7 +401,6 @@ section.snacks {
         }
       }
     }
-
     li.slick-active {
       opacity: 1;
       background-color: $accent;
@@ -346,99 +408,18 @@ section.snacks {
   }
 }
 
-.snack {
-  position: relative;
-  background-color: $white;
-  margin: 0 15px 68px;
 
-  .photo {
 
-  }
 
-  img {
-    width: 260px;
-    height: 180px;
-  }
-
-  .description {
-    background-color: $white;
-    width: 260px;
-    position: relative;
-    padding-top: 50px;
-    text-align: center;
-
-    .button {
-      width: 100%;
-
-      .number {
-        margin-left: auto;
-      }
-    }
-  }
-
-  .price {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-color: $accent-light;
-    width: 60px;
-    height: 60px;
-    padding-top: 13px;
-    position: absolute;
-    top: 0;
-    left: 100px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    p {
-      color: $white;
-      font-size: 12px;
-      text-align: center;
-
-      span {
-        font-family: $menu-font;
-      }
-    }
-
-    .weight {
-      padding-bottom: 4px;
-    }
-  }
-
-  h3 {
-    padding-bottom: 10px;
-  }
-
-  p {
-    font-size: 13px;
-  }
-
-  p.text {
-    line-height: 24px;
-    padding: 0 30px 10px;
-  }
-
-  p.composition {
-    background-color: #f2f2f2;
-    line-height: 24px;
-    padding: 10px 20px 8px;
-  }
-}
 
 .drinks {
   .container {
     text-align: center;
   }
-
   .section-header {
     padding-bottom: 100px;
   }
-
   &-slider {
-
     .slick-arrow, .slick-next, .slick-prev {
       width: 50px;
       height: 50px;
