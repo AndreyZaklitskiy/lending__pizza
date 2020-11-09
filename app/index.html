@@ -169,7 +169,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -209,7 +209,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -247,7 +247,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -285,7 +285,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -323,7 +323,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -361,7 +361,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -399,7 +399,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -437,7 +437,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -475,7 +475,7 @@
                 </div>
               </div>
             </div>
-            <div class="pizza-snacks-slider_item__description">
+            <div class="pizza-description">
               <h3>
                 Пицца неаполитана,
                 <sapn class="pizza-size">26</sapn>
@@ -796,7 +796,7 @@
   </div>
 </section>
 
-<section class="checkout">
+<!--<section class="checkout">
   <div class="container">
 
     <div class="checkout-form">
@@ -848,8 +848,226 @@
     </div>
 
   </div>
+</section>-->
+
+
+
+<section class="order-section">
+  <div class="container section">
+    <div class="row">
+    <div class="row">
+      <div class="order-form-block">
+        <div class="section-header">
+          <h2>Адрес и время доставки</h2>
+          <p>Пожалуйста, выберите удобную дату и время доставки, введите ваш полный адрес и телефон, чтобы мы могли
+            убедиться в том, что ваш заказ нашел вас:</p>
+        </div>
+
+        <form action="" class="order-form">
+          <label for="">
+            <span>Дата доставки:</span>
+            <input type="text" class="form-date">
+          </label>
+          <label for="">
+            <span>Время доставки:</span>
+            <input type="text" class="form-time">
+          </label>
+
+          <label for="">
+            <span>Ваше имя:</span>
+            <input type="text" class="form-name">
+          </label>
+
+          <label for="">
+            <span>Ваш телефон:</span>
+            <input type="text" class="form-phone">
+          </label>
+
+          <label for="" class="form-address">
+            <span>Адрес доставки:</span>
+            <input type="text" class="address">
+          </label>
+
+          <label for="" class="form-comment">
+            <span>Комментарий к заказу:</span>
+            <textarea name="" class="comment"></textarea>
+          </label>
+
+        </form>
+      </div>
+
+      <div class="checkout">
+        <div class="checkout-block">
+          <h2>ваш заказ</h2>
+          <ul class="checkout-list">
+            <!-- сделать скрипт который будет сокращать строчку с названием продукта если она не влазит -->
+            <li class="checkout-item">
+              <a href="#" class="remove-btn">
+                <i class="fas fa-times-circle"></i>
+              </a>
+              <p class="product">
+                Пицца "Пепперони"
+              </p>
+              <p class="dots">
+                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
+              <p class="price">
+                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
+              </p>
+            </li>
+            <li class="checkout-item">
+              <a href="#" class="remove-btn">
+                <i class="fas fa-times-circle"></i>
+              </a>
+              <p class="product">
+                Пицца "Пепперони"
+              </p>
+              <p class="dots">
+                <!--если checkout-item width < checkout-block width -> dots= + . --></p>
+              <p class="price">
+                <span class="number">1 шт.</span> / <span class="price">1330 руб.</span>
+              </p>
+            </li>
+
+          </ul>
+          <h2 class="sum">И того: 21 450 руб.</h2>
+          <div class="buttons-block">
+            <a href="#" class="reset btn">
+              <i class="fas fa-times"></i>
+              <span>сбросить</span>
+            </a>
+            <a href="#" class="issue btn">
+              <i class="fas fa-check"></i>
+              <span>Оформить</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+
+<footer class="footer-section" style="background-image: url(images/flour.jpg)">
+  <div class="container">
+    <div class="row">
+
+      <div class="footer-contacts-block">
+        <h3>
+          Пицца на дом
+        </h3>
+        <p>
+          Моментальная доставка свежей горячей пиццы прямо к вам одмой
+          или в офис.
+        </p>
+        <ul class="contacts-list">
+          <li class="contacts-item contacts-mail">
+            <i class="far fa-envelope"></i>
+            <p>pizzanadom@yandex.ru</p>
+          </li>
+          <li class="contacts-item contacts-phone">
+            <i class="fas fa-phone"></i>
+            <p>+7(999)999-99-99</p>
+          </li>
+          <li class="contacts-item contacts-address">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Москва. Коломеское ш. дом 46а, оф. 345</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-menu">
+        <h3>
+          Заказать:
+        </h3>
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="#">
+            <div class="mark"><i class="fas fa-chevron-right"></i></div>
+            Начало</a></li>
+          <li class="header-menu-item"><a href="#">
+            <div class="mark"><i class="fas fa-chevron-right"></i></div>
+            Выбрать пиццу</a></li>
+          <li class="header-menu-item"><a href="#">
+            <div class="mark"><i class="fas fa-chevron-right"></i></div>
+            Выбрать закуску</a></li>
+          <li class="header-menu-item"><a href="#">
+            <div class="mark"><i class="fas fa-chevron-right"></i></div>
+            Выбрать напитки</a></li>
+        </ul>
+
+        <a href="#" class="request-btn">
+          Сделать заявку
+        </a>
+      </div>
+
+      <div class="footer-gallery">
+        <h3>
+          Галерея Instagram:
+        </h3>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="images/salat1.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+          <div class="gallery-item">
+            <img src="images/salat2.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-networks">
+        <h3>
+          Мы в соц. сетях
+        </h3>
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="#">
+            <div class="mark"><i class="fab fa-facebook-f"></i></div>
+            Facebook</a></li>
+          <li class="header-menu-item"><a href="#">
+            <div class="mark"><i class="fab fa-twitter"></i></div>
+            Twitter</a></li>
+          <li class="header-menu-item"><a href="#">
+            <div class="mark"><i class="fab fa-vk"></i></div>
+            Вконтакте</a></li>
+          <li class="header-menu-item"><a href="#">
+            <div class="mark"><i class="fab fa-linkedin-in"></i></div>
+            Linkedin</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
 
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/slick-carousel/slick/slick.min.js"></script>

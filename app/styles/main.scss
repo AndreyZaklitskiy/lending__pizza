@@ -228,6 +228,7 @@ ul.slick-dots {
   left: 0;
   margin-bottom: 77px;
 
+
   li {
     height: 15px;
     width: 15px;
@@ -253,6 +254,10 @@ ul.slick-dots {
 @import "sections/snacks-section";
 @import "sections/drinks-section";
 @import "sections/warranty";
+@import "sections/order-section";
+@import "sections/footer-section";
+
+
 
 .checkout {
   @extend .col-md-7;
