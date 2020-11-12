@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95f06c06-34c6-4ad7-8289-39c8a9e43405" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/images/logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sections/_order-section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sections/_order-section.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/sections/_footer-section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sections/_footer-section.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/styles/sections/_pizza-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sections/_pizza-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sections/_warranty.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sections/_warranty.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,16 +22,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jTlSIVNzDO32PykQNWtq1N8jQN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -110,47 +99,42 @@
       <workItem from="1604327453169" duration="595000" />
       <workItem from="1604506487913" duration="11571000" />
       <workItem from="1604587396699" duration="2255000" />
-      <workItem from="1604953533601" duration="3730000" />
-      <workItem from="1605115281429" duration="2459000" />
-      <workItem from="1605198673213" duration="18458000" />
+      <workItem from="1604953533601" duration="1515000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state width="981" height="39" key="GridCell.Tab.0.bottom" timestamp="1605215052454">
+    <state width="981" height="138" key="GridCell.Tab.0.bottom" timestamp="1604955055049">
       <screen x="-1024" y="165" width="1024" height="738" />
     </state>
-    <state width="981" height="39" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1605215052454" />
-    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1024.165.1024.738@0.0.1920.1050" timestamp="1605115951827" />
-    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1605135471048" />
-    <state width="981" height="39" key="GridCell.Tab.0.center" timestamp="1605215052454">
+    <state width="981" height="138" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1604955055049" />
+    <state width="1877" height="214" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1024.165.1024.738@0.0.1920.1050" timestamp="1604589039568" />
+    <state width="1877" height="15" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1603981834981" />
+    <state width="981" height="138" key="GridCell.Tab.0.center" timestamp="1604955055049">
       <screen x="-1024" y="165" width="1024" height="738" />
     </state>
-    <state width="981" height="39" key="GridCell.Tab.0.center/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1605215052454" />
-    <state width="1877" height="213" key="GridCell.Tab.0.center/0.0.1920.1050/-1024.165.1024.738@0.0.1920.1050" timestamp="1605115951826" />
-    <state width="1877" height="213" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1605135471048" />
-    <state width="981" height="39" key="GridCell.Tab.0.left" timestamp="1605215052454">
+    <state width="981" height="138" key="GridCell.Tab.0.center/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1604955055049" />
+    <state width="1877" height="214" key="GridCell.Tab.0.center/0.0.1920.1050/-1024.165.1024.738@0.0.1920.1050" timestamp="1604589039567" />
+    <state width="1877" height="15" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1603981834980" />
+    <state width="981" height="138" key="GridCell.Tab.0.left" timestamp="1604955055048">
       <screen x="-1024" y="165" width="1024" height="738" />
     </state>
-    <state width="981" height="39" key="GridCell.Tab.0.left/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1605215052454" />
-    <state width="1877" height="213" key="GridCell.Tab.0.left/0.0.1920.1050/-1024.165.1024.738@0.0.1920.1050" timestamp="1605115951826" />
-    <state width="1877" height="213" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1605135471047" />
-    <state width="981" height="39" key="GridCell.Tab.0.right" timestamp="1605215052454">
+    <state width="981" height="138" key="GridCell.Tab.0.left/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1604955055048" />
+    <state width="1877" height="214" key="GridCell.Tab.0.left/0.0.1920.1050/-1024.165.1024.738@0.0.1920.1050" timestamp="1604589039567" />
+    <state width="1877" height="15" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1603981834980" />
+    <state width="981" height="138" key="GridCell.Tab.0.right" timestamp="1604955055049">
       <screen x="-1024" y="165" width="1024" height="738" />
     </state>
-    <state width="981" height="39" key="GridCell.Tab.0.right/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1605215052454" />
-    <state width="1877" height="213" key="GridCell.Tab.0.right/0.0.1920.1050/-1024.165.1024.738@0.0.1920.1050" timestamp="1605115951826" />
-    <state width="1877" height="213" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1605135471048" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1605207896284">
+    <state width="981" height="138" key="GridCell.Tab.0.right/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1604955055049" />
+    <state width="1877" height="214" key="GridCell.Tab.0.right/0.0.1920.1050/-1024.165.1024.738@0.0.1920.1050" timestamp="1604589039567" />
+    <state width="1877" height="15" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1603981834980" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1604513673030">
       <screen x="-1024" y="165" width="1024" height="738" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1605207896284" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1050/-1024.165.1024.738@-1024.165.1024.738" timestamp="1604513673030" />
     <state x="-703" y="452" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604509893933">
       <screen x="-1024" y="165" width="1024" height="738" />
     </state>

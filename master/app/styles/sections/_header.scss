@@ -1,0 +1,105 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  .container {
+    padding: 30px 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+    background-color: black;
+  }
+}
+
+//главное меню
+.menu {
+  z-index: 3;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &-item {
+    display: inline-block;
+    margin-right: 45px;
+    a {
+      display: inline-block;
+      font-size: 12px;
+      font-family: $menu-font;
+      color: $white;
+      text-transform: uppercase;
+      .arr {
+        color: #67635E;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        text-align: center;
+        margin-right: 7px;
+        .fas {
+          line-height: 1.8;
+          font-size: 11px;
+        }
+      }
+      span {
+        text-decoration: underline;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      a > .arr {
+        background-color: $accent;
+
+        .fas {
+          color: $black;
+        }
+      }
+      span {
+        color: $accent;
+        text-decoration: none;
+      }
+    }
+  }
+}
+//номер телефона
+.phone {
+  margin-top: 5px;
+  text-align: right;
+  .order {
+    color: $white;
+    opacity: 0.35;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+  &-number {
+    .fas {
+      display: inline-block;
+      color: $accent;
+      font-size: 12px;
+      margin-right: 2px;
+      margin-top: -2px;
+    }
+    .number {
+      display: inline-block;
+      font-family: $phone-font;
+      font-size: 24px;
+      color: $white;
+      letter-spacing: .5px;
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.warranty {
+  background-image: url(../../images/flour.jpg);
+  background-position: top;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  .section-header {
+    padding-top: 90px;
+    padding-bottom: 70px;
+
+    p {
+      margin-top: 40px;
+      line-height: 28px;
+      font-size: 18px;
+    }
+  }
+}

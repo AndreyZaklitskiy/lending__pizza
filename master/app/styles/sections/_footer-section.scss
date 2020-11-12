@@ -1,0 +1,153 @@
+.footer-section {
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  .container {
+    padding-top: 80px;
+  }
+  h3 {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .header-menu {
+    @extend .col-lg-12, .col-md-12;
+      height: auto;
+      padding-right: 0;
+      padding-left: 0;
+      &-item {
+        display: block;
+        width: auto;
+        height: auto;
+        a {
+          width: 100%;
+          padding: 6px 0;
+          text-transform: uppercase;
+        }
+        &:nth-child(1) {
+          a {
+            padding: 0 0 6px;
+          }
+        }
+      }
+
+    }
+
+}
+
+.footer-contacts-block {
+  @extend .col-lg-3, .col-sm-6;
+  margin-bottom: 80px;
+  p {
+    color: #ffffff;
+    opacity: .5;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 45px;
+  }
+}
+
+.contacts-list {
+
+}
+.contacts-item {
+  @extend .col-md-10;
+  margin-bottom: 15px;
+  color: #ffffff;
+  position: relative;
+  i {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+  p {
+    margin-left: 10px;
+    display: inline-block;
+    color: #ffffff;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.contacts-mail {
+  p {
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+
+.footer-menu {
+  @extend .col-lg-3, .col-sm-6;
+  position: relative;
+  margin-bottom: 80px;
+  .header-menu {
+    margin-bottom: 55px;
+  }
+  .request-btn {
+    @extend .btn;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.footer-gallery {
+  @extend .col-lg-4, .col-sm-6;
+  margin-bottom: 80px;
+}
+.gallery {
+  width: 100%;
+  height: 223px;
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.gallery-item {
+  /*width: 84px;
+  height: 66px;*/
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer-networks {
+  @extend .col-lg-2, .col-sm-6;
+  margin-bottom: 80px;
+  .header-menu {
+    &-item {
+      .mark {
+        line-height: 2.4;
+        width: 28px;
+        height: 28px;
+        background-color: $accent;
+      }
+      a {
+        &:hover {
+          i {
+            color: #ffffff;
+          }
+        }
+      }
+      &:nth-child(1) {
+        a {
+          padding: 0 0 6px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .footer-section {
+    .header-menu {
+      display: block;
+    }
+  }
+  .footer-contacts-block {
+
+  }
+}
