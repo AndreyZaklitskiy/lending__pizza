@@ -62,13 +62,16 @@
   .form-address, .form-comment {
     width: 100%;
     flex-basis: 100%;
-  }
 
+  }
 }
-.form-comment {
-  margin-bottom: 0;
-  label {
+
+.order-form {
+  .form-comment {
     margin-bottom: 0;
+    label {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -132,10 +135,6 @@
     span {
       display: inline-block;
     }
-  }
-
-  .buttons-block {
-
   }
 }
 
@@ -241,17 +240,22 @@
   }
 
 
-
   .checkout-item .product {
     max-width: 180px;
   }
 }
+
 @media (max-width: 768px) {
   .checkout-item .product {
     max-width: 250px;
   }
-  .form-comment {
-    margin-bottom: 35px;
+  .order-form {
+    .form-comment {
+      margin-bottom: 35px;
+      label {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -260,6 +264,7 @@
     max-width: 100px;
   }
 }
+
 @media (max-width: 320px) {
   .checkout-item .product {
     max-width: 90px;
