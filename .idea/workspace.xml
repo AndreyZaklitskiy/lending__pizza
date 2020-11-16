@@ -4,8 +4,7 @@
     <list default="true" id="95f06c06-34c6-4ad7-8289-39c8a9e43405" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sections/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sections/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sections/_order-section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sections/_order-section.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/sections/_footer-section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sections/_footer-section.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,7 @@
       <workItem from="1605115281429" duration="2459000" />
       <workItem from="1605198673213" duration="18658000" />
       <workItem from="1605291003833" duration="838000" />
-      <workItem from="1605550931101" duration="2180000" />
+      <workItem from="1605550931101" duration="4452000" />
     </task>
     <servers />
   </component>

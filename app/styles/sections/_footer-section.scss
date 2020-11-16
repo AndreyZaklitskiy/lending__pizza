@@ -9,7 +9,7 @@
     color: #fff;
     margin-bottom: 30px;
   }
-  .header-menu {
+  /*.header-menu {
     @extend .col-lg-12, .col-md-12;
       height: auto;
       padding-right: 0;
@@ -30,8 +30,21 @@
         }
       }
 
+    }*/
+  .menu {
+    margin-bottom: 55px;
+    flex-direction: column;
+    .mark {
+      display: inline-block;
+      margin-right: 7px;
     }
-
+    &-item {
+      margin-bottom: 20px;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .footer-contacts-block {
@@ -82,9 +95,7 @@
   @extend .col-lg-3, .col-sm-6;
   position: relative;
   margin-bottom: 80px;
-  .header-menu {
-    margin-bottom: 55px;
-  }
+
   .request-btn {
     @extend .btn;
     position: absolute;
@@ -116,15 +127,19 @@
 .footer-networks {
   @extend .col-lg-2, .col-sm-6;
   margin-bottom: 80px;
-  .header-menu {
+  .menu {
     &-item {
       .mark {
         line-height: 2.4;
         width: 28px;
         height: 28px;
         background-color: $accent;
+        border-radius: 50%;
+        text-align: center;
+
       }
       a {
+
         &:hover {
           i {
             color: #ffffff;
