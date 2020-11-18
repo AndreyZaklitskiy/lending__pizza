@@ -140,6 +140,9 @@ p {
       color: white;
     }
   }
+  button {
+    border: none;
+  }
 }
 
 .button.active {
@@ -156,8 +159,10 @@ p {
 
   .btn {
     cursor: pointer;
-    padding: 17px 16px 8px 17px;
-
+    padding: 10px 16px 8px 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .choose {
       display: none;
     }

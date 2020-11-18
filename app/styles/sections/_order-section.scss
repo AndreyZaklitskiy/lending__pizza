@@ -190,7 +190,9 @@
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-
+  button {
+    border: none;
+  }
   .reset {
     background-color: transparent;
     color: #8a8a8a;

@@ -50,7 +50,6 @@
     }
   }
 }
-
 .footer-contacts-block {
   @extend .col-lg-3, .col-md-6;
   margin-bottom: 80px;
@@ -94,11 +93,8 @@
   @extend .col-lg-3, .col-md-6;
   position: relative;
   margin-bottom: 80px;
-
   .request-btn {
     @extend .btn;
-    //position: absolute;
-    bottom: 0;
     font-size: 12px;
     letter-spacing: .3px;
     height: auto;
