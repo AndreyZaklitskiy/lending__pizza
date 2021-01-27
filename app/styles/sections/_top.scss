@@ -1,5 +1,5 @@
-//предложения
-.offers {
+/* header-slider*/
+.top {
   position: relative;
   min-height: 100vh;
   padding-bottom: 100px;
@@ -27,7 +27,7 @@
   }
 }
 //------------header slider-------------
-.offers-slider {
+.top-slider {
   padding: 65px 0 65px;
   &_item {
     position: relative;
@@ -116,14 +116,14 @@
 
 /*----MEDIA----*/
 @media (max-width: 768px) {
-  .offers-slider_item__img {
+  .top-slider_item__img {
     img {
       margin: auto 0 0;
     }
   }
 }
 @media (max-width: 575px) {
-  .offers-slider {
+  .top-slider {
     &_item__text {
       h1 {
         font-size: 42px;
@@ -152,7 +152,7 @@
   }
 }
 @media (max-width: 480px) {
-  .offers-slider {
+  .top-slider {
     &_item__text {
       text-align: center;
       align-items: center;
@@ -170,7 +170,7 @@
   }
 }
 @media (max-width: 320px) {
-  .offers-slider {
+  .top-slider {
     &_item__img {
       img {
         height: auto;

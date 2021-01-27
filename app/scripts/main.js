@@ -6,7 +6,7 @@ $(document).ready(function(){
   });
 
   //Верхний слайдер (горячие предложения).
-  $('.offers-slider').slick({
+  $('.top-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
 });
@@ -35,9 +35,6 @@ $(document).ready(function(){
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
@@ -73,9 +70,6 @@ $(document).ready(function(){
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
@@ -96,9 +90,6 @@ $(document).ready(function(){
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
@@ -111,25 +102,52 @@ $(document).ready(function(){
 
 
   // выбор размера пиццы
-  var ts = $('.pizza').find('.size-26');
-  var tt = $('.pizza').find('.size-32');
+  var ts = $('.pizza-slider_item').find('.size-26');
+  var tt = $('.pizza-slider_item').find('.size-32');
 
   ts.on('click', function(){
     var little = '26';
     var littlePizzaPrice = '999 руб.';
     $(this).addClass('selected');
     $(this).siblings().removeClass('selected');
-    $(this).closest('.pizza').find('.pizza-price').html(littlePizzaPrice);
-    $(this).closest('.pizza').find('.pizza-size').html(little);
-    $(this).closest('.pizza-size').html(little);
+    $(this).closest('.pizza-slider_item').find('.price').html(littlePizzaPrice);
+    $(this).closest('.pizza-slider_item').find('.size').html(little);
+    // $(this).closest('.size').html(little);
   });
   tt.on('click', function(){
     var big = '32';
     var bigPizzaPrice = '1 345 руб.';
     $(this).siblings().removeClass('selected');
     $(this).addClass('selected');
-    $(this).closest('.pizza').find('.pizza-price').html(bigPizzaPrice);
-    $(this).closest('.pizza').find('.pizza-size').html(big);
+    $(this).closest('.pizza-slider_item').find('.price').html(bigPizzaPrice);
+    $(this).closest('.pizza-slider_item').find('.size').html(big);
+    // $(this).closest('.size').html(big);
   });
+
+
+  let button = $('.button');
+  let push = $('.button').children('.btn');
+  let price = push.closest('.total-price');
+  let item = `<li class="checkout-item">
+                <button class="remove-btn">
+                  <i class="fas fa-times-circle"></i>
+                </button>
+                <span class="product">
+                  Пицца "Пепперони"
+                </span>
+                <span class="price">
+                  <span class="number">1 шт.</span> / <span class="price">${price}</span>
+                </span>
+              </li>`;
+
+
+  push.on('click', function () {
+    $('.checkout-list').append(item);
+  });
+
+
+
+
+
 });
 

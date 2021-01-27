@@ -92,7 +92,9 @@
 }
 
 .checkout {
-  @extend .col-xl-5, .col-lg-6, .col-md-7;
+  &_wrap {
+    @extend .col-xl-5, .col-lg-6, .col-md-7;
+  }
   background-color: #2a2a2a;
   padding: 23px;
 
@@ -264,6 +266,14 @@
 @media (max-width: 460px) {
   .checkout-item .product {
     max-width: 100px;
+  }
+}
+@media (max-width: 360px) {
+  .checkout {
+    padding: 15px;
+    &-block {
+      padding: 30px 15px;
+    }
   }
 }
 
